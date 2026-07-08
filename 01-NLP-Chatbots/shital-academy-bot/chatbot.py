@@ -8,6 +8,12 @@ import spacy as sa
 
 from knowledge_base import shital_academy_knowledge
 from llm_helper import ask_llm
+
+from session_manager import (
+    create_session,
+    get_lead,
+    get_conversation,
+)
 # ==========================================================
 # NLP
 # ==========================================================
@@ -96,27 +102,15 @@ ACADEMY_EMAIL = os.getenv("ACADEMY_EMAIL")
 # SESSION DATA
 # ==========================================================
 
-conversation_history = []
+def save_message(session_id, sender, message):
 
-lead = {
-    "captured": False,
-    "question_count": 0,
-    "name": "",
-    "email": "",
-    "mobile": ""
-}
-
-def save_message(sender, message):
-    """
-    Store every message in conversation history.
-    """
+    conversation = get_conversation(session_id)
 
     timestamp = datetime.now().strftime("%H:%M:%S")
 
-    conversation_history.append(
+    conversation.append(
         f"[{timestamp}] {sender}: {message}"
     )
-
 
 def validate_email(email):
 
@@ -134,7 +128,7 @@ def validate_mobile(number):
 
     return number.isdigit() and len(number) == 10
 
-def capture_lead():
+def capture_lead(session_id):
 
     print("\nBot: Before we continue, I'd like to know a few details.")
 
@@ -164,7 +158,7 @@ def capture_lead():
             break
 
         print("Bot: Please enter a valid mobile number.")
-
+    lead = get_lead(session_id)
     lead["name"] = name
     lead["email"] = email
     lead["mobile"] = mobile
@@ -172,7 +166,11 @@ def capture_lead():
 
     print(f"\nBot: Thank you, {name}. Let's continue.\n")
     
-def send_transcript_to_academy():
+def send_transcript_to_academy(session_id):
+
+    lead = get_lead(session_id)
+
+    conversation = get_conversation(session_id)
 
     if not lead["captured"]:
         return
@@ -190,9 +188,11 @@ Mobile : {lead['mobile']}
 
 Conversation
 
-{chr(10).join(conversation_history)}
+{chr(10).join(conversation)}
 """
+
     msg = MIMEText(body)
+
     msg["Subject"] = f"New Chatbot Lead - {lead['name']}"
     msg["From"] = SMTP_EMAIL
     msg["To"] = ACADEMY_EMAIL
@@ -527,81 +527,79 @@ def preprocess(doc):
 
 def run():
 
-    print("=" * 60)
-    print("Bot: Namaste! Welcome to Shital Academy.")
-    print("Bot: I'm here to answer your questions.")
-    print("Bot: Type 'bye' anytime to exit.")
-    print("=" * 60)
+    session_id = create_session()
 
-    while True:
+    try:
 
-        question = input("\nYou : ").strip()
+        print("=" * 60)
+        print("Bot: Namaste! Welcome to Shital Academy.")
+        print("Bot: I'm here to answer your questions.")
+        print("Bot: Type 'bye' anytime to exit.")
+        print("=" * 60)
 
-        if not question:
-            continue
+        while True:
 
-        # Save user message
-        save_message("User", question)
+            question = input("\nYou : ").strip()
 
-        message = question.lower()
+            if not question:
+                continue
 
-        # Goodbye
-        if goodbye(message):
-            reply = "Goodbye! Thank you for contacting Shital Academy."
-            print(f"\nBot: {reply}")
-            save_message("Bot", reply)
-            send_transcript_to_academy()
-            break
+            # Save user message
+            save_message(session_id, "User", question)
 
-        # Greeting
-        if greetings(message):
-            reply = "Hello! How can I help you today?"
-            print(f"\nBot: {reply}")
-            save_message("Bot", reply)
-            continue
+            message = question.lower()
 
-        # Count only real questions
-        lead["question_count"] += 1
+            # Goodbye
+            if goodbye(message):
+                reply = "Goodbye! Thank you for contacting Shital Academy."
+                print(f"\nBot: {reply}")
+                save_message(session_id, "Bot", reply)
+                break
 
-        # Ask lead details only once
-        if (
-            lead["question_count"] >= LEAD_CAPTURE_AFTER
-            and not lead["captured"]
-        ):
+            # Greeting
+            if greetings(message):
+                reply = "Hello! How can I help you today?"
+                print(f"\nBot: {reply}")
+                save_message(session_id, "Bot", reply)
+                continue
 
-            #capture_lead()
-            pass
-        
-        # NLP Processing
-        doc = nlp(question)
+            lead = get_lead(session_id)
+            lead["question_count"] += 1
 
-        reply = preprocess(doc)
+            if (
+                lead["question_count"] >= LEAD_CAPTURE_AFTER
+                and not lead["captured"]
+            ):
+                # capture_lead(session_id)
+                pass
 
-        # If no KB answer, ask Gemini
-        if reply == (
-            "Sorry, I didn't understand that. "
-            "Can you please rephrase?"
-        ):
+            doc = nlp(question)
+
+            reply = preprocess(doc)
+            
+            # if kb not answer then ask llm
+            if reply == (
+                "Sorry, I didn't understand that. "
+                "Can you please rephrase?"
+            ):
                 reply = ask_llm(question)
 
-        print(f"\nBot: {reply}")
-        save_message("Bot", reply)
+            print(f"\nBot: {reply}")
+            save_message(session_id, "Bot", reply)
+
+    except KeyboardInterrupt:
+        print("\n\nBot: Chat ended.")
+        
+    except Exception as e:
+        print("\nUnexpected Error:", e)
+        
+    finally:
+        send_transcript_to_academy(session_id)
 # ==========================================================
 # PROGRAM START
 # ==========================================================
 
 if __name__ == "__main__":
+    run()
 
-    try:
-
-        run()
-
-    except KeyboardInterrupt:
-
-        print("\n\nBot: Chat ended.")
-        send_transcript_to_academy()
-
-    except Exception as e:
-
-        print("\nUnexpected Error:", e)
-        send_transcript_to_academy()
+    

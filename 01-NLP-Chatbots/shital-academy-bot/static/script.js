@@ -21,6 +21,8 @@ const mobileInput = document.getElementById("mobile");
 let waitingForResponse = false;
 let chatEnded = false;
 
+let sessionId = null;
+
 // Always start with the modal hidden
 leadModal.classList.add("hidden");
 
@@ -136,7 +138,8 @@ async function sendMessage() {
             },
 
             body: JSON.stringify({
-                message: message
+                message: message,
+                session_id: sessionId
             })
 
         });
@@ -148,6 +151,7 @@ async function sendMessage() {
         }
 
         const data = await response.json();
+        sessionId = data.session_id;
 
         addMessage(data.reply, "bot");
 
@@ -194,6 +198,8 @@ leadForm.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const payload = {
+
+        session_id: sessionId,
 
         name: nameInput.value.trim(),
 
