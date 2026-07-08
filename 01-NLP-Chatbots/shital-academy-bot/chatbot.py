@@ -569,8 +569,8 @@ def run():
             and not lead["captured"]
         ):
 
-            capture_lead()
-
+            #capture_lead()
+            pass
         
         # NLP Processing
         doc = nlp(question)
