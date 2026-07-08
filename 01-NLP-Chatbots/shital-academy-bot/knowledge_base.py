@@ -232,7 +232,7 @@ shital_academy_knowledge = {
 },
 
 "certificate": {
-    "keywords": ["certificate","certification","course certificate","completion certificate","training certificate","completion"],
+    "keywords": ["certificate","course certificate","completion certificate","training certificate","completion"],
     "answer": "Yes, eligible courses include a course completion certificate after successfully completing the training."
 },
 
@@ -262,7 +262,7 @@ shital_academy_knowledge = {
 },
 
 "eligibility": {
-    "keywords": ["eligibility","qualification","who can join","who is eligible","required qualification","can i join","after 10th","after 12th","graduates","beginners"],
+    "keywords": ["eligibility","qualification","who can join","who is eligible","required qualification","can i join","after 10th","after 12th","graduates"],
     "answer": "Eligibility depends on the course. Many programs are suitable for beginners, students, graduates, and working professionals."
 },
 
@@ -277,7 +277,7 @@ shital_academy_knowledge = {
 },
 
 "student_support": {
-    "keywords": ["student support","help","support","guidance","mentor","faculty support","teacher support","doubt solving"],
+    "keywords": ["student support","academic guidance","mentor","mentorship","faculty support","teacher support","doubt solving","doubt clearing"],
     "answer": "Students receive guidance from experienced trainers along with support for learning, practice, and doubt solving during the course."
 },
 "corporate_training": {
