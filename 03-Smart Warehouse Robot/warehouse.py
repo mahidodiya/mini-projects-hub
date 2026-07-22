@@ -34,7 +34,6 @@ class Warehouse:
     def initialize_environment(self):
         """Place all objects in the warehouse.""" 
         
-        self.place_object(START_POSITION,ROBOT)
         self.place_object(PACKAGE_POSITION, PACKAGE)
         self.place_object(DELIVERY_POSITION, DELIVERY)
         
@@ -43,10 +42,20 @@ class Warehouse:
             
     
     def display(self):
-        """Display the warehouse grid."""
-        
-        for row in self.grid:
-            print(" ".join(row))
+        """Display the warehouse."""
+
+        for row in range(GRID_ROWS):
+
+            display_row = []
+
+            for col in range(GRID_COLS):
+
+                if (row, col) == self.robot_position:
+                    display_row.append(ROBOT)
+                else:
+                    display_row.append(self.grid[row][col])
+
+            print(" ".join(display_row))
             
     def reset(self):
         """Reset the warehouse to its initial state."""
@@ -82,16 +91,54 @@ class Warehouse:
             new_col = col + dc
             
             if not self.is_valid_position(new_row, new_col):
-                return INVALID_MOVE_REWARD
-            
-            # Remove robot from old position
-            self.grid[row][col] = EMPTY
+                return self.get_state(), INVALID_MOVE_REWARD, self.is_terminal()
             
             #Update robot position
             self.robot_position = (new_row , new_col)
+        
+            reward = self.get_reward()
+            done = self.is_terminal()
+            next_state = self.get_state()
+
+            return next_state, reward, done
             
-            #Place robot in new position
-            self.grid[new_row][new_col] =  ROBOT
+    def get_reward(self):
+            """
+            Calculate the reward based on the robot's current state.
+            """
+            # Robot reaches the package
+            if self.robot_position == PACKAGE_POSITION and not self.has_package:
+                self.has_package = True
+                return PACKAGE_REWARD
+        
+            #Robot delivers the package
+            if(
+                self.robot_position == DELIVERY_POSITION and
+                self.has_package
             
+            ):
+                return DELIVERY_REWARD
+    
+            # Normal movement
             return MOVE_REWARD
-            
+    
+    def is_terminal(self):
+        """
+        Check whether the current episode has finished.
+        """
+
+        return (
+            self.has_package
+            and self.robot_position == DELIVERY_POSITION
+            )
+        
+    def get_state(self):
+        """
+        Return the current state of the environment.
+        """
+
+        return (
+            self.robot_position,
+            self.has_package
+        )
+    

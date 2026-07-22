@@ -1,22 +1,11 @@
-from warehouse import Warehouse
-from config import *
+from td_agent import TDAgent
 
 
 def main():
-    warehouse = Warehouse()
-    
-    print("Initial Warehouse")
-    warehouse.display()
+    agent = TDAgent()
 
-    reward = warehouse.move_robot(RIGHT)
+    print(agent.value_table)
 
-    print("\nReward:", reward)
-    warehouse.display()
 
-    reward = warehouse.move_robot(DOWN)
-
-    print("\nReward:", reward)
-    warehouse.display()
-    
 if __name__ == "__main__":
     main()
