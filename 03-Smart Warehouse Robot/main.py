@@ -1,11 +1,16 @@
 from td_agent import TDAgent
 
+agent = TDAgent()
 
-def main():
-    agent = TDAgent()
+state = ((0, 0), False)
+next_state = ((0, 1), False)
 
-    print(agent.value_table)
+print("Before:", agent.value_table[state])
 
+agent.update(
+    state,
+    reward=-1,
+    next_state=next_state,
+)
 
-if __name__ == "__main__":
-    main()
+print("After :", agent.value_table[state])

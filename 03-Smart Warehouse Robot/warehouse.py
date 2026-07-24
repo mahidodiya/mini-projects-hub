@@ -142,3 +142,24 @@ class Warehouse:
             self.has_package
         )
     
+    def get_next_state(self, state, action):
+        """
+        Return the next state without changing the environment.
+        """
+
+        (row, col), has_package = state
+
+        dr, dc = ACTION_DELTAS[action]
+
+        new_row = row + dr
+        new_col = col + dc
+
+        # Invalid move
+        if not self.is_valid_position(new_row, new_col):
+            return state
+
+        # Package collected?
+        if (new_row, new_col) == PACKAGE_POSITION:
+            has_package = True
+
+        return ((new_row, new_col), has_package)

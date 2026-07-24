@@ -40,6 +40,7 @@ DELIVERY_REWARD = 100
 
 LEARNING_RATE = 0.1      # α
 DISCOUNT_FACTOR = 0.9    # γ
+EPSILON = 0.1
 
 # ==========================================================
 # Training Configuration
