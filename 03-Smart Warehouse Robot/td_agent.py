@@ -54,6 +54,26 @@ class TDAgent:
             
         return best_action
     
+    def choose_best_action(self, state, warehouse):
+        """
+        Choose the best action based on the learned value function.
+        Used during evaluation (no exploration).
+        """
+
+        best_action = None
+        best_value = float("-inf")
+
+        for action in ACTIONS:
+
+            next_state = warehouse.get_next_state(state, action)
+            value = self.value_table[next_state]
+
+            if value > best_value:
+                best_value = value
+                best_action = action
+
+        return best_action
+
     def update(self, state, reward, next_state):
         """
         Update the state value using TD(0).

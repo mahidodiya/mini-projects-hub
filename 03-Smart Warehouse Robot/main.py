@@ -5,7 +5,7 @@ Entry point for the Smart Warehouse Robot project.
 """
 
 from train import train
-
+from evaluation import evaluate
 
 def main():
     """
@@ -33,6 +33,8 @@ def main():
     print(f"Average Steps       : {average_steps:.2f}")
     print("=" * 50)
 
+    print("\nStarting Evaluation...")
+    evaluate(agent)
 
 if __name__ == "__main__":
     main()
