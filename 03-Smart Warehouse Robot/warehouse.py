@@ -21,10 +21,9 @@ class Warehouse:
         """Create an empty warehouse grid."""
         
         self.grid = [
-            [EMPTY for _ in range(GRID_ROWS)]
-            for _ in range(GRID_COLS)
-        ]
-        
+            [EMPTY for _ in range(GRID_COLS)]
+            for _ in range(GRID_ROWS)
+]
     def place_object(self, position, symbol):
         """Place an object on the grid."""
         

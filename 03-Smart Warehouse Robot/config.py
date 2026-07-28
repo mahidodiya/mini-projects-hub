@@ -46,8 +46,8 @@ EPSILON = 0.1
 # Training Configuration
 # ==========================================================
 
-EPISODES = 1000
-MAX_STEPS_PER_EPISODE = 100
+TRAIN_EPISODES = 1000
+MAX_STEPS = 100
 
 # ==========================================================
 # Display Symbols
@@ -82,3 +82,4 @@ ACTION_DELTAS = {
     LEFT: (0, -1),
     RIGHT: (0, 1),
 }
+

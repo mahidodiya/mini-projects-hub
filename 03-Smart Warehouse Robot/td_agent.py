@@ -34,7 +34,9 @@ class TDAgent:
         """
         
         # Exploration
-        if random.random() < EPSILON:
+        explore = random.random() < EPSILON
+
+        if explore:
             return random.choice(ACTIONS)
         
         # Exploitation
