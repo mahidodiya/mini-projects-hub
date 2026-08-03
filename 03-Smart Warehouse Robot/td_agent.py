@@ -32,18 +32,19 @@ class TDAgent:
         """
         Choose an action using the epsilon(e)-greedy policy.
         """
+        valid_actions = warehouse.get_valid_actions(state)
         
         # Exploration
         explore = random.random() < EPSILON
 
         if explore:
-            return random.choice(ACTIONS)
+            return random.choice(valid_actions)
         
         # Exploitation
         best_action = None
         best_value = float("-inf")
         
-        for action in ACTIONS:
+        for action in valid_actions:
             
             next_state = warehouse.get_next_state(state, action)
             value = self.value_table[next_state]
@@ -56,14 +57,26 @@ class TDAgent:
     
     def choose_best_action(self, state, warehouse):
         """
-        Choose the best action based on the learned value function.
-        Used during evaluation (no exploration).
+        Choose the best valid action based on the learned value function.
+        Used during evaluation.
         """
+        valid_actions = warehouse.get_valid_actions(state)
+        
+        (row, col), _ = state
 
         best_action = None
         best_value = float("-inf")
 
-        for action in ACTIONS:
+        for action in valid_actions:
+
+            dr, dc = ACTION_DELTAS[action]
+
+            new_row = row + dr
+            new_col = col + dc
+
+            # Skip invalid actions
+            if not warehouse.is_valid_position(new_row, new_col):
+                continue
 
             next_state = warehouse.get_next_state(state, action)
             value = self.value_table[next_state]

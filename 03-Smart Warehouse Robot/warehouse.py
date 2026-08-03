@@ -80,6 +80,27 @@ class Warehouse:
         
         return True
     
+    def get_valid_actions(self, state):
+        """
+        Return all valid actions from the given state.
+        """
+
+        (row, col), _ = state
+
+        valid_actions = []
+
+        for action in ACTIONS:
+
+            dr, dc = ACTION_DELTAS[action]
+
+            new_row = row + dr
+            new_col = col + dc
+
+            if self.is_valid_position(new_row, new_col):
+                valid_actions.append(action)
+
+        return valid_actions
+    
     def move_robot(self , action):
         #Move the robot in the given direction.
 
