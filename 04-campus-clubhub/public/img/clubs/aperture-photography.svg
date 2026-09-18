@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Aperture Photography Society cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(61)">
+      <stop offset="0%" stop-color="#a74c24"/>
+      <stop offset="100%" stop-color="#421e0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d79172" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d79172" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="986"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="268" cy="222" rx="528" ry="390" fill="url(#glow)"/>
+  <g><rect x="178" y="63" width="40" height="7" rx="4" fill="#d79172" opacity="0.30" transform="rotate(343 178 63)"/><rect x="576" y="446" width="118" height="21" rx="4" fill="#d79172" opacity="0.23" transform="rotate(173 576 446)"/><rect x="423" y="100" width="64" height="12" rx="4" fill="#d79172" opacity="0.32" transform="rotate(77 423 100)"/><polygon points="229.84028063714504,229.44716680794954 269.96472923085093,241.4845013860613 239.87139278557152,269.57161540165544" fill="#d79172" opacity="0.20" transform="rotate(266 230 229)"/><polygon points="545.9956274181604,449.24322604201734 664.4150514341891,484.76905324682593 575.6004834221676,567.662650058046" fill="#d79172" opacity="0.20" transform="rotate(39 546 449)"/><rect x="715" y="96" width="53" height="10" rx="4" fill="#d79172" opacity="0.29" transform="rotate(1 715 96)"/><polygon points="905.3621683269739,93.21129424497485 1036.9519629422575,132.68823262955993 938.2596169807948,224.80108886025846" fill="#d79172" opacity="0.23" transform="rotate(258 905 93)"/><polygon points="427.2114323079586,577.3033107630908 522.52650805749,605.8978334879503 451.04020124534145,672.6183865126222" fill="#d79172" opacity="0.13" transform="rotate(275 427 577)"/><polygon points="67.64978975057602,570.4190607648343 144.32971453294158,593.423038199544 86.81977094616741,647.0989855471998" fill="#d79172" opacity="0.23" transform="rotate(143 68 570)"/><polygon points="928.7895834445953,487.6233236398548 1033.4043449442834,519.0077520897612 954.9432738195173,592.2380851395428" fill="#d79172" opacity="0.15" transform="rotate(235 929 488)"/><rect x="276" y="419" width="93" height="17" rx="4" fill="#d79172" opacity="0.15" transform="rotate(238 276 419)"/><rect x="821" y="285" width="35" height="6" rx="4" fill="#d79172" opacity="0.16" transform="rotate(297 821 285)"/><polygon points="54.983605071902275,512.2125801164657 199.39046018756926,555.5346366511658 91.08531885081902,656.6194352321327" fill="#d79172" opacity="0.27" transform="rotate(287 55 512)"/><rect x="233" y="101" width="133" height="24" rx="4" fill="#d79172" opacity="0.18" transform="rotate(125 233 101)"/><polygon points="135.09047001600266,499.66639364138246 283.02498349919915,544.0467476863414 172.07409838680178,647.600907124579" fill="#d79172" opacity="0.26" transform="rotate(211 135 500)"/><polygon points="473.32605823874474,84.58311036229134 577.1085465699434,115.71785686165094 499.2716803215444,188.36559869349003" fill="#d79172" opacity="0.30" transform="rotate(222 473 85)"/></g>
+  <g transform="translate(537 66) scale(2.580) rotate(3.7 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>

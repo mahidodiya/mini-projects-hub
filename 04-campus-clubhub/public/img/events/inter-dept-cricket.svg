@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Inter-Department Cricket Cup — Final banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(51)">
+      <stop offset="0%" stop-color="#17693b"/>
+      <stop offset="100%" stop-color="#092917"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#69a784" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#69a784" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="640"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="505" cy="68" rx="528" ry="273" fill="url(#glow)"/>
+  <g><path d="M-40 156 Q 480 -18 1000 156" fill="none" stroke="#69a784" stroke-width="2.3" opacity="0.29"/><path d="M-40 82 Q 480 -133 1000 82" fill="none" stroke="#69a784" stroke-width="4.2" opacity="0.18"/><path d="M-40 137 Q 480 -18 1000 137" fill="none" stroke="#69a784" stroke-width="1.7" opacity="0.13"/><path d="M-40 60 Q 480 -102 1000 60" fill="none" stroke="#69a784" stroke-width="2.9" opacity="0.33"/><path d="M-40 336 Q 480 122 1000 336" fill="none" stroke="#69a784" stroke-width="3.3" opacity="0.24"/><path d="M-40 373 Q 480 241 1000 373" fill="none" stroke="#69a784" stroke-width="2.3" opacity="0.16"/><path d="M-40 290 Q 480 148 1000 290" fill="none" stroke="#69a784" stroke-width="2.3" opacity="0.16"/><path d="M-40 173 Q 480 17 1000 173" fill="none" stroke="#69a784" stroke-width="3.1" opacity="0.24"/><path d="M-40 330 Q 480 250 1000 330" fill="none" stroke="#69a784" stroke-width="2.4" opacity="0.23"/></g>
+  <g transform="translate(662 46) scale(1.806) rotate(1.1 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

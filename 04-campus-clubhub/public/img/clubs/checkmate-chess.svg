@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Checkmate Chess Circle cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(42)">
+      <stop offset="0%" stop-color="#17693b"/>
+      <stop offset="100%" stop-color="#092917"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#69a784" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#69a784" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="583"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="250" cy="83" rx="528" ry="390" fill="url(#glow)"/>
+  <g><path d="M-40 595 Q 480 516 1000 595" fill="none" stroke="#69a784" stroke-width="3.7" opacity="0.27"/><path d="M-40 101 Q 480 31 1000 101" fill="none" stroke="#69a784" stroke-width="1.8" opacity="0.18"/><path d="M-40 241 Q 480 17 1000 241" fill="none" stroke="#69a784" stroke-width="3.3" opacity="0.14"/><path d="M-40 21 Q 480 -169 1000 21" fill="none" stroke="#69a784" stroke-width="4.4" opacity="0.24"/><path d="M-40 522 Q 480 454 1000 522" fill="none" stroke="#69a784" stroke-width="4.2" opacity="0.14"/><path d="M-40 250 Q 480 74 1000 250" fill="none" stroke="#69a784" stroke-width="4.0" opacity="0.25"/><path d="M-40 387 Q 480 297 1000 387" fill="none" stroke="#69a784" stroke-width="4.2" opacity="0.32"/><path d="M-40 218 Q 480 11 1000 218" fill="none" stroke="#69a784" stroke-width="2.6" opacity="0.15"/><path d="M-40 131 Q 480 -108 1000 131" fill="none" stroke="#69a784" stroke-width="1.8" opacity="0.32"/></g>
+  <g transform="translate(484 66) scale(2.580) rotate(-2.1 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>

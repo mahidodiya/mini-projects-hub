@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="College crest">
+  <path d="M32 3 58 12v22c0 14-11 24-26 27C17 58 6 48 6 34V12z" fill="#7B1E2B"/>
+  <path d="M32 8 53 15v19c0 11.5-9 19.8-21 22.5C20 53.8 11 45.5 11 34V15z" fill="none" stroke="#D9A441" stroke-width="1.6"/>
+  <path d="M15 26 32 19l17 7-17 7z" fill="#D9A441"/>
+  <path d="M22 30v8c0 3.5 4.5 5.6 10 5.6S42 41.5 42 38v-8" fill="none" stroke="#F7F4EF" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M49 26v9" stroke="#D9A441" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="49" cy="37" r="2.2" fill="#D9A441"/>
+</svg>

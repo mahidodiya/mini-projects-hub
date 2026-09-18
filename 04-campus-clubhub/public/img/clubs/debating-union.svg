@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="The Debating Union cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(51)">
+      <stop offset="0%" stop-color="#5c368a"/>
+      <stop offset="100%" stop-color="#241536"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9d80c0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#9d80c0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="926"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="446" cy="142" rx="528" ry="390" fill="url(#glow)"/>
+  <g><rect x="-20" y="260" width="53" height="340" rx="6" fill="#9d80c0" opacity="0.15"/><rect x="42" y="289" width="61" height="311" rx="6" fill="#9d80c0" opacity="0.20"/><rect x="119" y="138" width="51" height="462" rx="6" fill="#9d80c0" opacity="0.13"/><rect x="183" y="170" width="42" height="430" rx="6" fill="#9d80c0" opacity="0.25"/><rect x="239" y="147" width="60" height="453" rx="6" fill="#9d80c0" opacity="0.25"/><rect x="316" y="378" width="41" height="222" rx="6" fill="#9d80c0" opacity="0.11"/><rect x="368" y="102" width="44" height="498" rx="6" fill="#9d80c0" opacity="0.09"/><rect x="424" y="363" width="23" height="237" rx="6" fill="#9d80c0" opacity="0.22"/><rect x="456" y="136" width="25" height="464" rx="6" fill="#9d80c0" opacity="0.13"/><rect x="498" y="112" width="19" height="488" rx="6" fill="#9d80c0" opacity="0.16"/><rect x="527" y="262" width="36" height="338" rx="6" fill="#9d80c0" opacity="0.14"/><rect x="582" y="246" width="26" height="354" rx="6" fill="#9d80c0" opacity="0.24"/><rect x="621" y="237" width="35" height="363" rx="6" fill="#9d80c0" opacity="0.18"/><rect x="670" y="318" width="38" height="282" rx="6" fill="#9d80c0" opacity="0.14"/><rect x="714" y="296" width="36" height="304" rx="6" fill="#9d80c0" opacity="0.14"/><rect x="761" y="114" width="60" height="486" rx="6" fill="#9d80c0" opacity="0.17"/><rect x="838" y="63" width="55" height="537" rx="6" fill="#9d80c0" opacity="0.16"/><rect x="903" y="291" width="44" height="309" rx="6" fill="#9d80c0" opacity="0.19"/><rect x="955" y="131" width="39" height="469" rx="6" fill="#9d80c0" opacity="0.14"/></g>
+  <g transform="translate(505 66) scale(2.580) rotate(2.9 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 56c-18-13-42-18-70-15v104c28-3 52 2 70 15 18-13 42-18 70-15V41c-28-3-52 2-70 15z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 56v104" stroke="currentColor" stroke-width="7"/>
+    <path d="M46 72h34M46 92h34M46 112h26M120 72h34M120 92h34M120 112h26" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 56c-18-13-42-18-70-15v104c28-3 52 2 70 15 18-13 42-18 70-15V41c-28-3-52 2-70 15z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 56v104" stroke="currentColor" stroke-width="7"/>
+    <path d="M46 72h34M46 92h34M46 112h26M120 72h34M120 92h34M120 112h26" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Weekend Trek — Kalsubai Summit banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(34)">
+      <stop offset="0%" stop-color="#17693b"/>
+      <stop offset="100%" stop-color="#092917"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#69a784" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#69a784" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="25"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="325" cy="79" rx="528" ry="273" fill="url(#glow)"/>
+  <g><path d="M-40 361 Q 480 180 1000 361" fill="none" stroke="#69a784" stroke-width="3.7" opacity="0.12"/><path d="M-40 106 Q 480 25 1000 106" fill="none" stroke="#69a784" stroke-width="4.0" opacity="0.15"/><path d="M-40 71 Q 480 -83 1000 71" fill="none" stroke="#69a784" stroke-width="2.5" opacity="0.22"/><path d="M-40 55 Q 480 -183 1000 55" fill="none" stroke="#69a784" stroke-width="3.5" opacity="0.21"/><path d="M-40 99 Q 480 -96 1000 99" fill="none" stroke="#69a784" stroke-width="2.2" opacity="0.14"/><path d="M-40 141 Q 480 -58 1000 141" fill="none" stroke="#69a784" stroke-width="3.1" opacity="0.30"/><path d="M-40 389 Q 480 215 1000 389" fill="none" stroke="#69a784" stroke-width="4.1" opacity="0.19"/><path d="M-40 266 Q 480 135 1000 266" fill="none" stroke="#69a784" stroke-width="4.0" opacity="0.27"/><path d="M-40 212 Q 480 24 1000 212" fill="none" stroke="#69a784" stroke-width="3.6" opacity="0.14"/></g>
+  <g transform="translate(667 46) scale(1.806) rotate(3.5 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

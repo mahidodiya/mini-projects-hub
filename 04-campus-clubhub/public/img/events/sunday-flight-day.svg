@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Open Flight Day banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(32)">
+      <stop offset="0%" stop-color="#1b5f78"/>
+      <stop offset="100%" stop-color="#0b262f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6ba0b2" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6ba0b2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="988"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="579" cy="136" rx="528" ry="273" fill="url(#glow)"/>
+  <g><path d="M920 380 L920 260 L800 260 L680 260 L800 260" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.29" stroke-linecap="round"/><circle cx="800" cy="260" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M620 280 L540 280 L460 280 L460 440 L500 440" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.29" stroke-linecap="round"/><circle cx="500" cy="440" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M200 340 L200 380 L200 420 L80 420 L80 340" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.29" stroke-linecap="round"/><circle cx="80" cy="340" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M720 400 L720 560 L720 520 L720 680 L720 800" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.21" stroke-linecap="round"/><circle cx="720" cy="800" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M680 100 L560 100 L720 100 L640 100 L760 100" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.24" stroke-linecap="round"/><circle cx="760" cy="100" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M400 100 L320 100 L320 -60 L480 -60 L360 -60" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.21" stroke-linecap="round"/><circle cx="360" cy="-60" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M40 120 L40 200 L40 80 L80 80 L120 80" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.21" stroke-linecap="round"/><circle cx="120" cy="80" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M320 200 L320 240 L400 240 L400 320 L400 400" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.24" stroke-linecap="round"/><circle cx="400" cy="400" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M160 40 L320 40 L360 40 L360 160 L480 160" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.28" stroke-linecap="round"/><circle cx="480" cy="160" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M480 160 L520 160 L440 160 L440 280 L440 440" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.19" stroke-linecap="round"/><circle cx="440" cy="440" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M860 140 L980 140 L1140 140 L1140 20 L1260 20" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.18" stroke-linecap="round"/><circle cx="1260" cy="20" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M180 260 L180 220 L180 60 L180 20 L140 20" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.23" stroke-linecap="round"/><circle cx="140" cy="20" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M580 380 L580 340 L580 180 L700 180 L660 180" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.24" stroke-linecap="round"/><circle cx="660" cy="180" r="4" fill="#6ba0b2" opacity="0.35"/><path d="M900 400 L780 400 L780 560 L740 560 L740 440" fill="none" stroke="#6ba0b2" stroke-width="2" opacity="0.27" stroke-linecap="round"/><circle cx="740" cy="440" r="4" fill="#6ba0b2" opacity="0.35"/></g>
+  <g transform="translate(654 46) scale(1.806) rotate(2.3 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <rect x="18" y="34" width="164" height="112" rx="10" fill="none" stroke="currentColor" stroke-width="7"/>
+    <path d="M18 62h164" stroke="currentColor" stroke-width="7"/>
+    <circle cx="34" cy="48" r="4.5" fill="currentColor"/><circle cx="50" cy="48" r="4.5" fill="currentColor"/>
+    <path d="M62 86l-18 20 18 20M138 86l18 20-18 20M112 82l-24 48" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M74 166h52l6 14H68z" fill="currentColor"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <rect x="18" y="34" width="164" height="112" rx="10" fill="none" stroke="currentColor" stroke-width="7"/>
+    <path d="M18 62h164" stroke="currentColor" stroke-width="7"/>
+    <circle cx="34" cy="48" r="4.5" fill="currentColor"/><circle cx="50" cy="48" r="4.5" fill="currentColor"/>
+    <path d="M62 86l-18 20 18 20M138 86l18 20-18 20M112 82l-24 48" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M74 166h52l6 14H68z" fill="currentColor"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

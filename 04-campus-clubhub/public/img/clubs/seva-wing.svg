@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Seva Social Service Wing cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(26)">
+      <stop offset="0%" stop-color="#52691c"/>
+      <stop offset="100%" stop-color="#20290b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#95a76c" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#95a76c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="884"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="373" cy="230" rx="528" ry="390" fill="url(#glow)"/>
+  <g><path d="M658 372 q 85.49843355081975 -17.09968671016395 85.49843355081975 59.84890348557382 q -72.67366851819679 21.37460838770494 -85.49843355081975 -59.84890348557382 z" fill="#95a76c" opacity="0.25" transform="rotate(113 658 372)"/><path d="M629 543 q 45.73346568038687 -9.146693136077374 45.73346568038687 32.01342597627081 q -38.87344582832884 11.433366420096718 -45.73346568038687 -32.01342597627081 z" fill="#95a76c" opacity="0.26" transform="rotate(276 629 543)"/><path d="M599 196 q 127.46656639967114 -25.493313279934227 127.46656639967114 89.2265964797698 q -108.34658143972047 31.866641599917784 -127.46656639967114 -89.2265964797698 z" fill="#95a76c" opacity="0.21" transform="rotate(92 599 196)"/><path d="M166 539 q 107.04374379012734 -21.408748758025467 107.04374379012734 74.93062065308914 q -90.98718222160824 26.760935947531834 -107.04374379012734 -74.93062065308914 z" fill="#95a76c" opacity="0.14" transform="rotate(72 166 539)"/><path d="M399 7 q 127.48673581518233 -25.497347163036466 127.48673581518233 89.24071507062763 q -108.36372544290498 31.871683953795582 -127.48673581518233 -89.24071507062763 z" fill="#95a76c" opacity="0.27" transform="rotate(8 399 7)"/><path d="M847 408 q 149.88979859976098 -29.977959719952196 149.88979859976098 104.92285901983269 q -127.40632880979683 37.472449649940245 -149.88979859976098 -104.92285901983269 z" fill="#95a76c" opacity="0.23" transform="rotate(156 847 408)"/><path d="M676 482 q 113.37533365935087 -22.675066731870174 113.37533365935087 79.36273356154561 q -96.36903361044824 28.343833414837718 -113.37533365935087 -79.36273356154561 z" fill="#95a76c" opacity="0.16" transform="rotate(64 676 482)"/><path d="M454 573 q 101.06434405082837 -20.212868810165673 101.06434405082837 70.74504083557986 q -85.90469244320411 25.266086012707092 -101.06434405082837 -70.74504083557986 z" fill="#95a76c" opacity="0.29" transform="rotate(279 454 573)"/><path d="M268 507 q 80.01284539699554 -16.00256907939911 80.01284539699554 56.008991777896874 q -68.01091858744621 20.003211349248886 -80.01284539699554 -56.008991777896874 z" fill="#95a76c" opacity="0.22" transform="rotate(340 268 507)"/><path d="M81 105 q 57.57012747693807 -11.514025495387614 57.57012747693807 40.29908923385665 q -48.93460835539736 14.392531869234517 -57.57012747693807 -40.29908923385665 z" fill="#95a76c" opacity="0.22" transform="rotate(250 81 105)"/><path d="M528 138 q 81.51506757130846 -16.303013514261693 81.51506757130846 57.06054729991592 q -69.2878074356122 20.378766892827116 -81.51506757130846 -57.06054729991592 z" fill="#95a76c" opacity="0.20" transform="rotate(80 528 138)"/><path d="M612 320 q 110.59614759171382 -22.119229518342763 110.59614759171382 77.41730331419967 q -94.00672545295674 27.649036897928454 -110.59614759171382 -77.41730331419967 z" fill="#95a76c" opacity="0.26" transform="rotate(221 612 320)"/></g>
+  <g transform="translate(542 66) scale(2.580) rotate(-2.6 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 148c0-38 24-66 62-70-4 38-26 62-62 70z" fill="currentColor"/>
+    <path d="M100 148c0-30-19-52-49-56 3 30 21 49 49 56z" fill="currentColor" opacity=".72"/>
+    <path d="M100 176v-34" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+    <path d="M30 176c14-12 30-18 70-18s56 6 70 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 148c0-38 24-66 62-70-4 38-26 62-62 70z" fill="currentColor"/>
+    <path d="M100 148c0-30-19-52-49-56 3 30 21 49 49 56z" fill="currentColor" opacity=".72"/>
+    <path d="M100 176v-34" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+    <path d="M30 176c14-12 30-18 70-18s56 6 70 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>

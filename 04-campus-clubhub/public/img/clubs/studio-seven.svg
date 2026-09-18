@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Studio Seven Design cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(20)">
+      <stop offset="0%" stop-color="#a74c24"/>
+      <stop offset="100%" stop-color="#421e0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d79172" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d79172" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="187"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="437" cy="191" rx="528" ry="390" fill="url(#glow)"/>
+  <g><polygon points="650.3557091206312,460.1293901447207 753.387348856777,491.0388820655644 676.1136190546677,563.1610298808664" fill="#d79172" opacity="0.19" transform="rotate(111 650 460)"/><rect x="90" y="542" width="134" height="24" rx="4" fill="#d79172" opacity="0.24" transform="rotate(83 90 542)"/><rect x="400" y="521" width="129" height="23" rx="4" fill="#d79172" opacity="0.23" transform="rotate(39 400 521)"/><rect x="436" y="95" width="128" height="23" rx="4" fill="#d79172" opacity="0.23" transform="rotate(92 436 95)"/><rect x="632" y="131" width="87" height="16" rx="4" fill="#d79172" opacity="0.13" transform="rotate(241 632 131)"/><rect x="526" y="159" width="74" height="13" rx="4" fill="#d79172" opacity="0.19" transform="rotate(258 526 159)"/><rect x="930" y="274" width="45" height="8" rx="4" fill="#d79172" opacity="0.13" transform="rotate(155 930 274)"/><polygon points="415.2277609705925,82.73406811058521 536.5005906578153,119.11591701675206 445.5459683923982,204.00689779780805" fill="#d79172" opacity="0.17" transform="rotate(351 415 83)"/><polygon points="333.56921419501305,341.5758528281003 455.6036327406764,378.18617839179933 364.0778188314289,463.6102713737637" fill="#d79172" opacity="0.18" transform="rotate(335 334 342)"/><rect x="395" y="82" width="140" height="25" rx="4" fill="#d79172" opacity="0.13" transform="rotate(87 395 82)"/><polygon points="161.34540773928165,353.3318919595331 240.8867538627237,377.1942957965657 181.23074427014217,432.87323808297515" fill="#d79172" opacity="0.19" transform="rotate(319 161 353)"/><rect x="944" y="584" width="134" height="24" rx="4" fill="#d79172" opacity="0.22" transform="rotate(99 944 584)"/><rect x="494" y="429" width="38" height="7" rx="4" fill="#d79172" opacity="0.20" transform="rotate(301 494 429)"/><rect x="810" y="453" width="47" height="8" rx="4" fill="#d79172" opacity="0.25" transform="rotate(35 810 453)"/><polygon points="871.8274415284395,291.9847693294287 951.090226136148,315.7636047117412 891.6431376803666,371.2475539371371" fill="#d79172" opacity="0.29" transform="rotate(172 872 292)"/><rect x="824" y="272" width="105" height="19" rx="4" fill="#d79172" opacity="0.13" transform="rotate(1 824 272)"/></g>
+  <g transform="translate(498 66) scale(2.580) rotate(3.5 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>

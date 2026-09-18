@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Frequency Campus Radio cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(30)">
+      <stop offset="0%" stop-color="#284085"/>
+      <stop offset="100%" stop-color="#101935"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7588bd" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7588bd" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="831"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="199" cy="57" rx="528" ry="390" fill="url(#glow)"/>
+  <g><circle cx="619" cy="125" r="246" fill="none" stroke="#7588bd" stroke-width="2.5" opacity="0.18"/><circle cx="832" cy="48" r="145" fill="none" stroke="#7588bd" stroke-width="2.8" opacity="0.20"/><circle cx="786" cy="296" r="121" fill="none" stroke="#7588bd" stroke-width="2.4" opacity="0.23"/><circle cx="902" cy="185" r="94" fill="none" stroke="#7588bd" stroke-width="2.9" opacity="0.19"/><circle cx="938" cy="188" r="69" fill="none" stroke="#7588bd" stroke-width="2.1" opacity="0.26"/><circle cx="753" cy="330" r="237" fill="none" stroke="#7588bd" stroke-width="3.0" opacity="0.14"/><circle cx="211" cy="258" r="233" fill="none" stroke="#7588bd" stroke-width="2.8" opacity="0.31"/></g>
+  <g transform="translate(480 66) scale(2.580) rotate(-4.4 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <rect x="22" y="70" width="112" height="84" rx="10" fill="none" stroke="currentColor" stroke-width="8"/>
+    <path d="M134 100l44-24v84l-44-24z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="30" y="38" width="112" height="26" rx="6" fill="currentColor" transform="rotate(-9 86 51)"/>
+    <path d="M44 34l10 26M74 30l10 26M104 26l10 26" stroke="#000" stroke-opacity=".3" stroke-width="5"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <rect x="22" y="70" width="112" height="84" rx="10" fill="none" stroke="currentColor" stroke-width="8"/>
+    <path d="M134 100l44-24v84l-44-24z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <rect x="30" y="38" width="112" height="26" rx="6" fill="currentColor" transform="rotate(-9 86 51)"/>
+    <path d="M44 34l10 26M74 30l10 26M104 26l10 26" stroke="#000" stroke-opacity=".3" stroke-width="5"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>

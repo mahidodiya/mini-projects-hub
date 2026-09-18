@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus ClubHub — Clubs &amp; Societies at Government Engineering College, Bhavnagar</title>
+  <meta name="description" content="Browse every student club and society on campus, see what is happening this week, and register for events." />
+  <link rel="icon" href="/img/brand/crest.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind is kept from the original stack for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ---------------- Top strip ---------------- -->
+  <div class="topbar">
+    <div class="wrap">
+      <span>Government Engineering College, Bhavnagar · Bhavnagar, Gujarat</span>
+      <span class="hide-sm">Student Affairs Office · <a href="mailto:clubs@gecb.ac.in">clubs@gecb.ac.in</a></span>
+    </div>
+  </div>
+
+  <!-- ---------------- Header ---------------- -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#/">
+        <img src="/img/brand/crest.svg" alt="" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-name">Campus ClubHub</span>
+          <span class="brand-sub">Clubs &amp; Societies</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#/" data-route="/">Home</a>
+        <a href="#/clubs" data-route="/clubs">Clubs</a>
+        <a href="#/events" data-route="/events">Events</a>
+        <a href="#/noticeboard" data-route="/noticeboard">Noticeboard</a>
+        <span id="navAuth"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ---------------- Pages render here ---------------- -->
+  <main id="main"></main>
+
+  <!-- ---------------- Footer ---------------- -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom:.8rem">
+            <img src="/img/brand/crest.svg" alt="" width="34" height="34" />
+            <span class="brand-text">
+              <span class="brand-name" style="color:#F3E2D2">Campus ClubHub</span>
+              <span class="brand-sub" style="color:#B99E8E">Government Engineering College, Bhavnagar</span>
+            </span>
+          </div>
+          <p style="max-width:34ch">The official directory of student clubs, societies and campus events. Run by the Student Affairs Office.</p>
+        </div>
+        <div>
+          <h5>Browse</h5>
+          <ul>
+            <li><a href="#/clubs">All clubs</a></li>
+            <li><a href="#/clubs?category=sports">Sports teams</a></li>
+            <li><a href="#/clubs?category=cultural">Performing arts</a></li>
+            <li><a href="#/events">Event calendar</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>For students</h5>
+          <ul>
+            <li><a href="#/dashboard">My campus</a></li>
+            <li><a href="#/noticeboard">Noticeboard</a></li>
+            <li><a href="#/clubs?recruiting=true">Clubs recruiting now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li>Student Centre, Ground Floor</li>
+            <li><a href="mailto:clubs@gecb.ac.in">clubs@gecb.ac.in</a></li>
+            <li>+91 261 000 0000</li>
+            <li>Mon–Fri, 10:00 – 17:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span id="year"></span> Government Engineering College, Bhavnagar. Built by the student web team.</span>
+        <span>Node.js · Express · PostgreSQL</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ---------------- Sign in / register ---------------- -->
+  <div class="modal-backdrop" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal">
+      <div class="modal__head">
+        <div>
+          <h3 id="authTitle">Sign in to ClubHub</h3>
+          <p class="small muted" style="margin-top:.2rem">Use your college email to join clubs and book events.</p>
+        </div>
+        <button class="btn--quiet" id="authClose" aria-label="Close">✕</button>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button id="tabLogin" class="is-active" role="tab" aria-selected="true">Sign in</button>
+        <button id="tabRegister" role="tab" aria-selected="false">Create account</button>
+      </div>
+
+      <div id="authError" class="form-error" hidden></div>
+
+      <!-- Sign in -->
+      <form id="loginForm">
+        <label class="field"><span>College email</span>
+          <input class="input" type="email" name="email" required placeholder="you@gecb.ac.in" autocomplete="email" />
+        </label>
+        <label class="field"><span>Password</span>
+          <input class="input" type="password" name="password" required autocomplete="current-password" />
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+        <p class="small muted" style="margin-top:.9rem;text-align:center">
+          Demo account —
+          <button type="button" id="fillDemo" class="btn--quiet small" style="padding:0;text-decoration:underline">use aarav@gecb.ac.in</button>
+        </p>
+      </form>
+
+      <!-- Register -->
+      <form id="registerForm" hidden>
+        <label class="field"><span>Full name</span>
+          <input class="input" name="name" required placeholder="Priya Desai" autocomplete="name" />
+        </label>
+        <label class="field"><span>College email</span>
+          <input class="input" type="email" name="email" required placeholder="you@gecb.ac.in" autocomplete="email" />
+        </label>
+        <div style="display:grid;grid-template-columns:1fr 92px;gap:.75rem">
+          <label class="field"><span>Branch</span>
+            <input class="input" name="branch" placeholder="Computer Engineering" />
+          </label>
+          <label class="field"><span>Year</span>
+            <select class="input" name="year_of_study">
+              <option value="1">1st</option><option value="2">2nd</option>
+              <option value="3">3rd</option><option value="4">4th</option>
+            </select>
+          </label>
+        </div>
+        <label class="field"><span>Enrollment number</span>
+          <input class="input" name="enrollment_no" placeholder="GECB23CE101" />
+        </label>
+        <label class="field"><span>Password</span>
+          <input class="input" type="password" name="password" required minlength="8" autocomplete="new-password" />
+          <span class="small muted" style="font-weight:400;margin-top:.25rem">At least 8 characters.</span>
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Create account</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Native Tree Plantation Drive banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(42)">
+      <stop offset="0%" stop-color="#52691c"/>
+      <stop offset="100%" stop-color="#20290b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#95a76c" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#95a76c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="971"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="610" cy="108" rx="528" ry="273" fill="url(#glow)"/>
+  <g><path d="M483 395 q 139.75203179288656 -27.95040635857731 139.75203179288656 97.82642225502059 q -118.78922702395357 34.93800794822164 -139.75203179288656 -97.82642225502059 z" fill="#95a76c" opacity="0.28" transform="rotate(159 483 395)"/><path d="M273 237 q 82.51325343502685 -16.50265068700537 82.51325343502685 57.75927740451879 q -70.13626541977283 20.628313358756714 -82.51325343502685 -57.75927740451879 z" fill="#95a76c" opacity="0.16" transform="rotate(186 273 237)"/><path d="M492 81 q 61.05097134131938 -12.210194268263876 61.05097134131938 42.73567993892357 q -51.893325640121475 15.262742835329846 -61.05097134131938 -42.73567993892357 z" fill="#95a76c" opacity="0.24" transform="rotate(204 492 81)"/><path d="M660 405 q 66.91639351425692 -13.383278702851385 66.91639351425692 46.84147545997985 q -56.878934487118386 16.72909837856423 -66.91639351425692 -46.84147545997985 z" fill="#95a76c" opacity="0.16" transform="rotate(219 660 405)"/><path d="M138 187 q 66.57650224631652 -13.315300449263304 66.57650224631652 46.603551572421566 q -56.590026909369044 16.64412556157913 -66.57650224631652 -46.603551572421566 z" fill="#95a76c" opacity="0.21" transform="rotate(190 138 187)"/><path d="M492 408 q 69.74471499677747 -13.948942999355495 69.74471499677747 48.82130049774423 q -59.283007747260854 17.43617874919437 -69.74471499677747 -48.82130049774423 z" fill="#95a76c" opacity="0.24" transform="rotate(3 492 408)"/><path d="M860 142 q 90.00343943247572 -18.000687886495143 90.00343943247572 63.002407602732994 q -76.50292351760436 22.50085985811893 -90.00343943247572 -63.002407602732994 z" fill="#95a76c" opacity="0.22" transform="rotate(208 860 142)"/><path d="M818 338 q 105.7711295527406 -21.15422591054812 105.7711295527406 74.03979068691842 q -89.90546011982951 26.44278238818515 -105.7711295527406 -74.03979068691842 z" fill="#95a76c" opacity="0.18" transform="rotate(156 818 338)"/><path d="M273 271 q 147.46300934581086 -29.492601869162172 147.46300934581086 103.2241065420676 q -125.34355794393923 36.865752336452715 -147.46300934581086 -103.2241065420676 z" fill="#95a76c" opacity="0.24" transform="rotate(239 273 271)"/><path d="M537 336 q 93.53493872098625 -18.70698774419725 93.53493872098625 65.47445710469037 q -79.50469791283831 23.38373468024656 -93.53493872098625 -65.47445710469037 z" fill="#95a76c" opacity="0.22" transform="rotate(104 537 336)"/><path d="M294 129 q 112.4412691919133 -22.48825383838266 112.4412691919133 78.70888843433931 q -95.57507881312631 28.110317297978327 -112.4412691919133 -78.70888843433931 z" fill="#95a76c" opacity="0.22" transform="rotate(352 294 129)"/><path d="M702 346 q 40.84265610203147 -8.168531220406294 40.84265610203147 28.589859271422025 q -34.71625768672675 10.210664025507867 -40.84265610203147 -28.589859271422025 z" fill="#95a76c" opacity="0.27" transform="rotate(57 702 346)"/></g>
+  <g transform="translate(624 46) scale(1.806) rotate(-1.3 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 148c0-38 24-66 62-70-4 38-26 62-62 70z" fill="currentColor"/>
+    <path d="M100 148c0-30-19-52-49-56 3 30 21 49 49 56z" fill="currentColor" opacity=".72"/>
+    <path d="M100 176v-34" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+    <path d="M30 176c14-12 30-18 70-18s56 6 70 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 148c0-38 24-66 62-70-4 38-26 62-62 70z" fill="currentColor"/>
+    <path d="M100 148c0-30-19-52-49-56 3 30 21 49 49 56z" fill="currentColor" opacity=".72"/>
+    <path d="M100 176v-34" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+    <path d="M30 176c14-12 30-18 70-18s56 6 70 18" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

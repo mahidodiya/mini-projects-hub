@@ -1,0 +1,356 @@
+/**
+ * The campus catalogue.
+ *
+ * This is the single place to edit real content — add a club here, run
+ * `npm run setup`, and it appears on the site with its own artwork.
+ */
+
+const CATEGORIES = [
+  { slug: 'technology', name: 'Technology',      blurb: 'Build software, hardware and everything in between.', accent: '#1F6F8B', icon: '⌨️', sort_order: 1 },
+  { slug: 'sports',     name: 'Sports & Fitness', blurb: 'Inter-college teams, weekend leagues and open practice.', accent: '#1B7A45', icon: '🏏', sort_order: 2 },
+  { slug: 'literary',   name: 'Literary & Debate', blurb: 'Writing, reading, arguing well and quizzing hard.',    accent: '#6B3FA0', icon: '✒️', sort_order: 3 },
+  { slug: 'arts',       name: 'Arts & Design',    blurb: 'Studio practice, exhibitions and design critique.',      accent: '#C2582A', icon: '🎨', sort_order: 4 },
+  { slug: 'media',      name: 'Media & Film',     blurb: 'The campus newsroom, radio booth and edit suite.',       accent: '#2E4A9B', icon: '🎬', sort_order: 5 },
+  { slug: 'cultural',   name: 'Performing Arts',  blurb: 'Music, dance and theatre through the festival season.',  accent: '#A81F5C', icon: '🎭', sort_order: 6 },
+  { slug: 'service',    name: 'Social Service',   blurb: 'Volunteering, outreach and a greener campus.',           accent: '#5F7A21', icon: '🌱', sort_order: 7 },
+  { slug: 'academic',   name: 'Career & Academic', blurb: 'Startups, finance, research and placement prep.',       accent: '#9A6B15', icon: '📈', sort_order: 8 },
+];
+
+const CLUBS = [
+  /* ---------------- Technology ---------------- */
+  {
+    slug: 'code-forge', name: 'Code Forge', category: 'technology',
+    tagline: 'Ship something every fortnight.',
+    description: 'Code Forge runs the campus programming community — weekly problem-solving sessions, a 36-hour hackathon each semester, and an open-source sprint where first-years make their first pull request. Members maintain the college result portal and three other tools that the campus actually uses every day.',
+    founded_year: 2014, meeting_day: 'Wednesday', meeting_time: '5:30 – 7:00 PM',
+    venue: 'Computer Lab 3, B Block', lead_name: 'Aarav Mehta', faculty_advisor: 'Prof. R. K. Iyer',
+    contact_email: 'codeforge@gecb.ac.in', instagram: 'codeforge.sit',
+    highlights: ['Winners, Smart India Hackathon 2025 (software edition)', 'Maintains the campus result portal used by 4,200 students', 'Weekly DSA ladder with recorded editorials'],
+    is_recruiting: true, is_featured: true, base_members: 312,
+  },
+  {
+    slug: 'circuit-lab', name: 'Circuit Lab Robotics', category: 'technology',
+    tagline: 'Metal, motors and a lot of soldering.',
+    description: 'The robotics workshop is open six days a week for anyone who wants to build. Teams work on line-followers and combat bots for the inter-college circuit, and the club keeps a shared parts library so nobody has to buy their own servo to get started.',
+    founded_year: 2016, meeting_day: 'Tuesday & Saturday', meeting_time: '4:00 – 7:00 PM',
+    venue: 'Robotics Workshop, Mechanical Wing', lead_name: 'Ishita Raval', faculty_advisor: 'Dr. S. Bhatt',
+    contact_email: 'circuitlab@gecb.ac.in', instagram: 'circuitlab.sit',
+    highlights: ['Runner-up, Robowars at Techfest Mumbai', 'Shared component library — free for members', 'Beginner soldering clinic every August'],
+    is_recruiting: true, is_featured: true, base_members: 148,
+  },
+  {
+    slug: 'bytewise', name: 'Bytewise Security Cell', category: 'technology',
+    tagline: 'Break things carefully, then report them.',
+    description: 'Bytewise studies application and network security through capture-the-flag practice and guided lab work on an isolated campus range. The cell also runs the responsible disclosure programme for college-run websites, working with the IT office on fixes.',
+    founded_year: 2019, meeting_day: 'Friday', meeting_time: '6:00 – 8:00 PM',
+    venue: 'Seminar Hall 2, B Block', lead_name: 'Kabir Shaikh', faculty_advisor: 'Prof. N. Desai',
+    contact_email: 'bytewise@gecb.ac.in', instagram: 'bytewise.sit',
+    highlights: ['Rank 12 nationally in InCTF 2025', 'Runs the college responsible-disclosure programme', 'Monthly beginner track — no prior experience needed'],
+    is_recruiting: true, is_featured: false, base_members: 96,
+  },
+  {
+    slug: 'skylab-aero', name: 'SkyLab Aeromodelling', category: 'technology',
+    tagline: 'Fixed wing, rotary wing, occasionally crash landings.',
+    description: 'SkyLab designs and flies RC aircraft and quadcopters, with a growing interest in autonomous survey flights. Build season runs through the winter and the club tests on the old athletics ground every Sunday morning.',
+    founded_year: 2018, meeting_day: 'Sunday', meeting_time: '7:00 – 10:00 AM',
+    venue: 'Old Athletics Ground', lead_name: 'Devansh Patel', faculty_advisor: 'Dr. A. Kulkarni',
+    contact_email: 'skylab@gecb.ac.in', instagram: 'skylab.sit',
+    highlights: ['Third place, SAE Aero Design South 2025', 'Two DGCA-certified drone pilots on the team', 'Builds survey drones for the civil department'],
+    is_recruiting: false, is_featured: false, base_members: 71,
+  },
+
+  /* ---------------- Sports ---------------- */
+  {
+    slug: 'willow-cricket', name: 'Willow Cricket Club', category: 'sports',
+    tagline: 'Nets at six, matches on Sunday.',
+    description: 'Willow fields the college XI in the inter-collegiate league and runs open nets four mornings a week for anyone who turns up. Selection trials are held in July, but the morning nets stay open to every student all year.',
+    founded_year: 2008, meeting_day: 'Monday to Thursday', meeting_time: '6:00 – 8:00 AM',
+    venue: 'Main Cricket Ground', lead_name: 'Rohan Chauhan', faculty_advisor: 'Coach M. Solanki',
+    contact_email: 'cricket@gecb.ac.in', instagram: 'willow.sit',
+    highlights: ['Gujarat Inter-College champions, 2024 and 2026', 'Open nets four mornings a week, no trial needed', 'Two players in the state under-23 squad'],
+    is_recruiting: true, is_featured: true, base_members: 84,
+  },
+  {
+    slug: 'baseline-badminton', name: 'Baseline Badminton', category: 'sports',
+    tagline: 'Four courts, one ladder, every evening.',
+    description: 'Baseline runs the indoor courts from five in the evening until close, with a rolling singles ladder that anyone can enter. Coaching sessions on Wednesdays focus on footwork and doubles rotation for newer players.',
+    founded_year: 2012, meeting_day: 'Monday to Friday', meeting_time: '5:00 – 9:00 PM',
+    venue: 'Indoor Sports Complex', lead_name: 'Sneha Pillai', faculty_advisor: 'Coach D. Vyas',
+    contact_email: 'badminton@gecb.ac.in', instagram: 'baseline.sit',
+    highlights: ['Rolling singles ladder open to all skill levels', 'Rackets and shuttles available to borrow', 'Hosts the Surat inter-college doubles open'],
+    is_recruiting: true, is_featured: false, base_members: 127,
+  },
+  {
+    slug: 'trailblazers', name: 'Trailblazers Trekking', category: 'sports',
+    tagline: 'One hill a month, one long walk a week.',
+    description: 'Trailblazers organises weekend treks in the Sahyadris and the Dang forests, plus a Tuesday evening run around the campus loop. Every trek has a trained first-aider and a pre-departure briefing, and gear is pooled so beginners are not left buying boots on day one.',
+    founded_year: 2015, meeting_day: 'Tuesday', meeting_time: '6:30 – 7:30 PM',
+    venue: 'Campus Loop, meet at Gate 2', lead_name: 'Meera Joshi', faculty_advisor: 'Prof. H. Trivedi',
+    contact_email: 'trailblazers@gecb.ac.in', instagram: 'trailblazers.sit',
+    highlights: ['Completed the Sandhan Valley descent in 2025', 'Shared gear pool — tents, packs and poles', 'Certified first-aider on every trek'],
+    is_recruiting: true, is_featured: false, base_members: 203,
+  },
+  {
+    slug: 'checkmate-chess', name: 'Checkmate Chess Circle', category: 'sports',
+    tagline: 'Blitz in the canteen, classical on Saturdays.',
+    description: 'The chess circle runs a rated internal ladder and a casual blitz table that lives in the canteen through the afternoon. Saturday sessions are slower — long games, post-mortems on the demo board, and the occasional simul against an invited master.',
+    founded_year: 2011, meeting_day: 'Saturday', meeting_time: '2:00 – 6:00 PM',
+    venue: 'Library Annexe, Reading Room 2', lead_name: 'Aryan Gupta', faculty_advisor: 'Prof. L. Menon',
+    contact_email: 'chess@gecb.ac.in', instagram: 'checkmate.sit',
+    highlights: ['Hosts an annual simul against a FIDE master', 'Rated internal ladder with monthly prizes', 'Blitz table in the canteen every afternoon'],
+    is_recruiting: true, is_featured: false, base_members: 89,
+  },
+
+  /* ---------------- Literary ---------------- */
+  {
+    slug: 'debating-union', name: 'The Debating Union', category: 'literary',
+    tagline: 'Parliamentary format, seven minutes, no notes.',
+    description: 'The Union holds British Parliamentary practice rounds every week and sends two teams to the national circuit each year. Adjudication training runs alongside speaking practice, because good judges are harder to find than good speakers.',
+    founded_year: 2009, meeting_day: 'Thursday', meeting_time: '5:00 – 7:30 PM',
+    venue: 'Moot Court Hall', lead_name: 'Zoya Ansari', faculty_advisor: 'Prof. V. Rangan',
+    contact_email: 'debate@gecb.ac.in', instagram: 'debunion.sit',
+    highlights: ['Quarter-finalists at the Gujarat BP Open 2026', 'Weekly adjudication training, not just speaking', 'Hosts the Nehru Memorial Debate each January'],
+    is_recruiting: true, is_featured: true, base_members: 118,
+  },
+  {
+    slug: 'inkwell', name: 'Inkwell Literary Society', category: 'literary',
+    tagline: 'Read closely, write badly, revise well.',
+    description: 'Inkwell alternates between a reading circle and a workshop where members bring drafts for line-by-line critique. The society publishes Margin, an annual anthology of student poetry, short fiction and translation.',
+    founded_year: 2007, meeting_day: 'Monday', meeting_time: '5:30 – 7:00 PM',
+    venue: 'Library Seminar Room', lead_name: 'Tanvi Bhatt', faculty_advisor: 'Dr. P. Nair',
+    contact_email: 'inkwell@gecb.ac.in', instagram: 'inkwell.sit',
+    highlights: ['Publishes Margin, the annual student anthology', 'Open-mic night on the last Friday of every month', 'Translation workshop in Gujarati, Hindi and English'],
+    is_recruiting: true, is_featured: false, base_members: 142,
+  },
+  {
+    slug: 'mindbenders-quiz', name: 'Mindbenders Quiz Club', category: 'literary',
+    tagline: 'Everything is quizzable.',
+    description: 'Mindbenders runs a themed quiz every fortnight — business, sport, film, and a general round that refuses to stay general. The club also trains the team that represents the college on the national quizzing circuit.',
+    founded_year: 2013, meeting_day: 'Friday', meeting_time: '4:30 – 6:30 PM',
+    venue: 'Lecture Hall 7', lead_name: 'Nikhil Menon', faculty_advisor: 'Prof. S. Chatterjee',
+    contact_email: 'quiz@gecb.ac.in', instagram: 'mindbenders.sit',
+    highlights: ['Fortnightly themed quizzes, open to walk-ins', 'Finalists at the Tata Crucible campus quiz', 'Runs the quiz stage at the annual festival'],
+    is_recruiting: true, is_featured: false, base_members: 97,
+  },
+
+  /* ---------------- Arts ---------------- */
+  {
+    slug: 'palette-fine-arts', name: 'Palette Fine Arts Society', category: 'arts',
+    tagline: 'The studio is open, the paint is shared.',
+    description: 'Palette keeps a working studio where members paint, sketch and print through the week. The society organises the campus mural programme and a spring exhibition in the central atrium that stays up for a fortnight.',
+    founded_year: 2010, meeting_day: 'Wednesday & Saturday', meeting_time: '3:00 – 6:00 PM',
+    venue: 'Art Studio, Humanities Block', lead_name: 'Riya Shah', faculty_advisor: 'Prof. K. Deshpande',
+    contact_email: 'palette@gecb.ac.in', instagram: 'palette.sit',
+    highlights: ['Painted nine campus murals since 2021', 'Materials are pooled and free for members', 'Spring exhibition in the central atrium'],
+    is_recruiting: true, is_featured: false, base_members: 134,
+  },
+  {
+    slug: 'aperture-photography', name: 'Aperture Photography Society', category: 'arts',
+    tagline: 'Shoot on Sunday, critique on Thursday.',
+    description: 'Aperture runs photo walks around Surat — the old city, the riverfront, the textile markets — and follows each one with an honest critique session. The society lends two DSLRs and a set of lenses to members who do not own a camera.',
+    founded_year: 2012, meeting_day: 'Thursday', meeting_time: '5:00 – 6:30 PM',
+    venue: 'Media Room, A Block', lead_name: 'Karan Doshi', faculty_advisor: 'Prof. M. Fernandes',
+    contact_email: 'aperture@gecb.ac.in', instagram: 'aperture.sit',
+    highlights: ['Two DSLRs and four lenses available to borrow', 'Monthly photo walk across Surat', 'Shoots the official festival and convocation coverage'],
+    is_recruiting: true, is_featured: true, base_members: 176,
+  },
+  {
+    slug: 'studio-seven', name: 'Studio Seven Design', category: 'arts',
+    tagline: 'Posters, brand systems and the occasional redesign nobody asked for.',
+    description: 'Studio Seven handles design work for campus events and teaches the craft behind it — typography, layout, and how to take feedback without taking it personally. Members run a weekly critique on work in progress.',
+    founded_year: 2020, meeting_day: 'Tuesday', meeting_time: '6:00 – 7:30 PM',
+    venue: 'Design Lab, A Block', lead_name: 'Anaya Kulkarni', faculty_advisor: 'Prof. G. Sethi',
+    contact_email: 'studio7@gecb.ac.in', instagram: 'studioseven.sit',
+    highlights: ['Designs the identity for the annual festival', 'Weekly critique on live student work', 'Free Figma and typography workshops each semester'],
+    is_recruiting: true, is_featured: false, base_members: 88,
+  },
+
+  /* ---------------- Media ---------------- */
+  {
+    slug: 'reel-lens', name: 'Reel Lens Film Club', category: 'media',
+    tagline: 'Watch on Friday, shoot in the holidays.',
+    description: 'Reel Lens screens a film every Friday evening with a short discussion afterwards, and produces two or three student short films a year. The club maintains a small equipment cage — a camera, lights, and a decent shotgun mic.',
+    founded_year: 2013, meeting_day: 'Friday', meeting_time: '7:00 – 10:00 PM',
+    venue: 'Auditorium Annexe', lead_name: 'Farhan Qureshi', faculty_advisor: 'Prof. A. Banerjee',
+    contact_email: 'reellens@gecb.ac.in', instagram: 'reellens.sit',
+    highlights: ['Weekly screening with an open discussion after', 'Two shorts selected at student festivals in 2025', 'Camera, lights and sound kit for member projects'],
+    is_recruiting: true, is_featured: false, base_members: 162,
+  },
+  {
+    slug: 'frequency-radio', name: 'Frequency Campus Radio', category: 'media',
+    tagline: 'Live from the booth under the library stairs.',
+    description: 'Frequency streams three hours a day through the campus network — music, interviews, and a mid-week show where departments answer student questions. Anyone can pitch a show, and training covers everything from mic technique to running the desk.',
+    founded_year: 2017, meeting_day: 'Daily', meeting_time: '12:00 – 3:00 PM',
+    venue: 'Radio Booth, Library Basement', lead_name: 'Ananya Rao', faculty_advisor: 'Prof. J. Dcunha',
+    contact_email: 'frequency@gecb.ac.in', instagram: 'frequency.sit',
+    highlights: ['Three hours of live programming every weekday', 'Anyone can pitch and host a show', 'Full training on the desk and mic technique'],
+    is_recruiting: true, is_featured: false, base_members: 74,
+  },
+  {
+    slug: 'campus-herald', name: 'The Campus Herald', category: 'media',
+    tagline: 'The student newspaper, published since 1998.',
+    description: 'The Herald reports on the things students actually argue about — hostel policy, fee revisions, placement numbers and the sports season. Editorial independence is written into its charter, and the newsroom trains reporters in sourcing, fact-checking and clean copy.',
+    founded_year: 1998, meeting_day: 'Monday & Thursday', meeting_time: '5:00 – 7:00 PM',
+    venue: 'Newsroom, Student Centre', lead_name: 'Siddharth Nair', faculty_advisor: 'Dr. R. Mathur',
+    contact_email: 'herald@gecb.ac.in', instagram: 'campusherald.sit',
+    highlights: ['Fortnightly print edition plus a daily web desk', 'Editorial independence written into its charter', 'Reporting and fact-checking workshop every semester'],
+    is_recruiting: true, is_featured: true, base_members: 109,
+  },
+
+  /* ---------------- Performing arts ---------------- */
+  {
+    slug: 'raag-music', name: 'Raag Music Society', category: 'cultural',
+    tagline: 'Classical upstairs, the band downstairs.',
+    description: 'Raag holds space for both halves of campus music — a Hindustani classical circle that meets for riyaz on weekday mornings, and four student bands that rehearse in the evenings. The society runs the unplugged night that opens the festival season.',
+    founded_year: 2006, meeting_day: 'Monday to Friday', meeting_time: '7:00 AM & 6:00 PM',
+    venue: 'Music Room, Student Centre', lead_name: 'Kavya Iyer', faculty_advisor: 'Prof. S. Trivedi',
+    contact_email: 'raag@gecb.ac.in', instagram: 'raag.sit',
+    highlights: ['Four student bands rehearsing through the week', 'Morning riyaz circle for classical vocalists', 'Opens the festival with the unplugged night'],
+    is_recruiting: true, is_featured: true, base_members: 198,
+  },
+  {
+    slug: 'footwork-dance', name: 'Footwork Dance Crew', category: 'cultural',
+    tagline: 'Garba in October, hip-hop the rest of the year.',
+    description: 'Footwork trains across street, contemporary and folk styles, and choreographs the opening act for every major campus event. Beginner batches start fresh each semester, so it is never too late to join.',
+    founded_year: 2011, meeting_day: 'Tuesday, Thursday & Sunday', meeting_time: '6:00 – 8:30 PM',
+    venue: 'Dance Studio, Student Centre', lead_name: 'Diya Kapadia', faculty_advisor: 'Prof. N. Shroff',
+    contact_email: 'footwork@gecb.ac.in', instagram: 'footwork.sit',
+    highlights: ['Winners, Western group dance at Chaos 2025', 'Fresh beginner batch every semester', 'Choreographs the festival opening act'],
+    is_recruiting: true, is_featured: false, base_members: 231,
+  },
+  {
+    slug: 'manch-theatre', name: 'Manch Theatre Group', category: 'cultural',
+    tagline: 'Street plays in the quad, full productions in the auditorium.',
+    description: 'Manch stages one full-length production a year alongside a regular street theatre programme on social issues performed in the quad and at nearby schools. Backstage, lights and sound are taught as seriously as acting.',
+    founded_year: 2005, meeting_day: 'Wednesday & Saturday', meeting_time: '5:00 – 8:00 PM',
+    venue: 'Main Auditorium', lead_name: 'Vivek Sharma', faculty_advisor: 'Dr. A. Pandya',
+    contact_email: 'manch@gecb.ac.in', instagram: 'manch.sit',
+    highlights: ['Staged Andha Yug to a full house in 2026', 'Street theatre programme across six local schools', 'Trains backstage, lights and sound crews'],
+    is_recruiting: true, is_featured: false, base_members: 116,
+  },
+
+  /* ---------------- Service ---------------- */
+  {
+    slug: 'seva-wing', name: 'Seva Social Service Wing', category: 'service',
+    tagline: 'Two hundred hours of volunteering a week.',
+    description: 'Seva coordinates the college volunteering programme — evening tuition at two municipal schools, blood donation drives, and a village outreach camp each winter. Hours are logged and count towards the NSS certificate.',
+    founded_year: 2004, meeting_day: 'Saturday', meeting_time: '9:00 AM – 1:00 PM',
+    venue: 'NSS Office, Admin Block', lead_name: 'Priyanka Solanki', faculty_advisor: 'Dr. B. Chauhan',
+    contact_email: 'seva@gecb.ac.in', instagram: 'seva.sit',
+    highlights: ['Evening tuition at two municipal schools', 'Collected 1,180 units at the 2025 blood drive', 'Volunteering hours count towards the NSS certificate'],
+    is_recruiting: true, is_featured: false, base_members: 287,
+  },
+  {
+    slug: 'prakriti-eco', name: 'Prakriti Eco Club', category: 'service',
+    tagline: 'Compost, canopy and a campus that uses less.',
+    description: 'Prakriti runs the campus composting unit, the plastic-free canteen audit and a native tree planting programme that has put 1,400 saplings in the ground since 2019. The club publishes an annual campus sustainability report.',
+    founded_year: 2016, meeting_day: 'Sunday', meeting_time: '8:00 – 11:00 AM',
+    venue: 'Botanical Garden, North Campus', lead_name: 'Aditya Verma', faculty_advisor: 'Dr. M. Shah',
+    contact_email: 'prakriti@gecb.ac.in', instagram: 'prakriti.sit',
+    highlights: ['1,400 native saplings planted since 2019', 'Runs the campus composting unit', 'Publishes the annual sustainability report'],
+    is_recruiting: true, is_featured: false, base_members: 153,
+  },
+
+  /* ---------------- Academic ---------------- */
+  {
+    slug: 'e-cell', name: 'Entrepreneurship Cell', category: 'academic',
+    tagline: 'From a slide deck to a first customer.',
+    description: 'E-Cell runs the campus pre-incubator — mentor office hours, a pitch clinic, and a demo day where student teams present to visiting investors. Eleven companies have been started by members since 2017, four of them still trading.',
+    founded_year: 2017, meeting_day: 'Wednesday', meeting_time: '6:00 – 8:00 PM',
+    venue: 'Incubation Centre, C Block', lead_name: 'Harsh Agarwal', faculty_advisor: 'Prof. D. Kothari',
+    contact_email: 'ecell@gecb.ac.in', instagram: 'ecell.sit',
+    highlights: ['Eleven companies founded by members since 2017', 'Mentor office hours with working founders', 'Annual demo day in front of visiting investors'],
+    is_recruiting: true, is_featured: true, base_members: 244,
+  },
+  {
+    slug: 'bulls-and-bears', name: 'Bulls & Bears Finance Club', category: 'academic',
+    tagline: 'A real portfolio, a real loss column.',
+    description: 'The club manages a small live portfolio funded by the alumni association and publishes a research note on every position it takes. Sessions cover valuation, macro reading and the parts of markets that do not appear in a textbook.',
+    founded_year: 2018, meeting_day: 'Thursday', meeting_time: '6:00 – 7:30 PM',
+    venue: 'Lecture Hall 4, C Block', lead_name: 'Ritika Jain', faculty_advisor: 'Prof. V. Ramaswamy',
+    contact_email: 'bullsbears@gecb.ac.in', instagram: 'bullsbears.sit',
+    highlights: ['Manages a live portfolio funded by alumni', 'Publishes a research note on every position', 'Mock trading week each February'],
+    is_recruiting: true, is_featured: false, base_members: 131,
+  },
+];
+
+/**
+ * Events are stored with an offset in days from the moment you seed, so the
+ * calendar is always populated no matter when the project is set up.
+ */
+const EVENTS = [
+  { slug: 'hack-the-monsoon', club: 'code-forge', title: 'Hack the Monsoon — 36 Hour Hackathon', dayOffset: 9, start_time: '09:00', end_time: '21:00', venue: 'Central Computing Centre', capacity: 240, entry_fee: 0, tags: ['hackathon', 'teams of 4', 'overnight'], base_rsvps: 186,
+    description: 'Thirty-six hours, four tracks and a hard stop on Sunday evening. Teams of up to four build anything they like against one of the tracks — campus utilities, climate data, accessibility or open play. Mentors from three product companies rotate through the floor overnight, and dinner is provided both nights.' },
+  { slug: 'intro-to-git', club: 'code-forge', title: 'Git & GitHub for Absolute Beginners', dayOffset: 3, start_time: '17:30', end_time: '19:00', venue: 'Computer Lab 3, B Block', capacity: 60, entry_fee: 0, tags: ['beginner', 'workshop'], base_rsvps: 44,
+    description: 'A hands-on session for anyone who has never made a commit. Bring a laptop; we will cover branching, merge conflicts and opening your first pull request on a real repository by the end of the ninety minutes.' },
+  { slug: 'robowars-qualifiers', club: 'circuit-lab', title: 'Robowars Campus Qualifiers', dayOffset: 16, start_time: '11:00', end_time: '17:00', venue: 'Mechanical Wing Courtyard', capacity: 300, entry_fee: 0, tags: ['competition', 'spectators welcome'], base_rsvps: 212,
+    description: 'Eight teams, a steel arena and a weight class capped at 15 kg. Winners represent the college at the national circuit in December. Spectators are welcome and safety briefings run on the hour.' },
+  { slug: 'ctf-night', club: 'bytewise', title: 'Capture the Flag — Beginner Night', dayOffset: 6, start_time: '18:00', end_time: '23:00', venue: 'Seminar Hall 2, B Block', capacity: 90, entry_fee: 0, tags: ['security', 'beginner track'], base_rsvps: 67,
+    description: 'A five-hour CTF with a deliberately gentle beginner track alongside the main set. Every challenge has a written solution released afterwards, so you leave understanding the ones you did not solve.' },
+  { slug: 'sunday-flight-day', club: 'skylab-aero', title: 'Open Flight Day', dayOffset: 4, start_time: '07:00', end_time: '10:00', venue: 'Old Athletics Ground', capacity: 80, entry_fee: 0, tags: ['outdoor', 'drop-in'], base_rsvps: 38,
+    description: 'Come and watch, or bring a trainer aircraft and get a hand from the team. Two club trainers are kept airworthy for first flights under supervision.' },
+
+  { slug: 'inter-dept-cricket', club: 'willow-cricket', title: 'Inter-Department Cricket Cup — Final', dayOffset: 12, start_time: '08:00', end_time: '16:00', venue: 'Main Cricket Ground', capacity: 500, entry_fee: 0, tags: ['final', 'spectators welcome'], base_rsvps: 341,
+    description: 'Computer Science meet Mechanical in a forty-over final after a three-week group stage. Stands open from half past seven and the canteen runs a stall by the sightscreen.' },
+  { slug: 'badminton-open', club: 'baseline-badminton', title: 'Surat Inter-College Doubles Open', dayOffset: 21, start_time: '09:00', end_time: '20:00', venue: 'Indoor Sports Complex', capacity: 160, entry_fee: 150, tags: ['tournament', 'entry fee'], base_rsvps: 94,
+    description: 'Sixteen colleges, men\u2019s and women\u2019s doubles, knockout from the first round. Entry covers both days, a shuttle allowance and lunch. Registration closes a week before play begins.' },
+  { slug: 'sahyadri-trek', club: 'trailblazers', title: 'Weekend Trek — Kalsubai Summit', dayOffset: 18, start_time: '05:00', end_time: '20:00', venue: 'Departs from Gate 2', capacity: 45, entry_fee: 900, tags: ['overnight travel', 'moderate grade'], base_rsvps: 41,
+    description: 'The highest peak in Maharashtra, climbed overnight to reach the summit at sunrise. Fee covers transport, two meals and a guide. A briefing on the Thursday before is compulsory for everyone going.' },
+  { slug: 'blitz-marathon', club: 'checkmate-chess', title: 'Blitz Marathon', dayOffset: 7, start_time: '14:00', end_time: '19:00', venue: 'Library Annexe', capacity: 64, entry_fee: 0, tags: ['rated', 'drop-in'], base_rsvps: 52,
+    description: 'Eleven rounds of three-minute blitz on a Swiss pairing. Boards and clocks provided; walk in any time before round two and you will be paired from there.' },
+
+  { slug: 'nehru-debate', club: 'debating-union', title: 'Nehru Memorial Parliamentary Debate', dayOffset: 24, start_time: '09:00', end_time: '19:00', venue: 'Moot Court Hall', capacity: 120, entry_fee: 0, tags: ['British Parliamentary', 'open to observers'], base_rsvps: 88,
+    description: 'Five preliminary rounds and a final in British Parliamentary format, with an invited adjudication panel. Observers are welcome in the gallery for the final at half past five.' },
+  { slug: 'open-mic-night', club: 'inkwell', title: 'Open Mic — Poetry & Prose', dayOffset: 2, start_time: '18:30', end_time: '21:00', venue: 'Amphitheatre, Student Centre', capacity: 150, entry_fee: 0, tags: ['open mic', 'sign up on the night'], base_rsvps: 103,
+    description: 'Five minutes each, any language, read your own work or something you love by somebody else. Sign-up opens at six on the night and the list usually fills, so come early.' },
+  { slug: 'general-quiz', club: 'mindbenders-quiz', title: 'The Big Fat General Quiz', dayOffset: 10, start_time: '16:30', end_time: '19:00', venue: 'Lecture Hall 7', capacity: 100, entry_fee: 0, tags: ['teams of 3', 'walk-ins welcome'], base_rsvps: 71,
+    description: 'Teams of three, a written prelim and eight rounds on the stage. No theme, no mercy, and a prize pool that the finance club has quietly sponsored again.' },
+
+  { slug: 'spring-exhibition', club: 'palette-fine-arts', title: 'Atrium Exhibition — Opening Night', dayOffset: 14, start_time: '17:00', end_time: '20:00', venue: 'Central Atrium', capacity: 200, entry_fee: 0, tags: ['exhibition', 'runs two weeks'], base_rsvps: 122,
+    description: 'Sixty works by forty student artists, hung across the atrium for a fortnight. The opening evening has the artists present and a short walkthrough at six.' },
+  { slug: 'old-city-photowalk', club: 'aperture-photography', title: 'Photo Walk — Surat Old City', dayOffset: 5, start_time: '06:30', end_time: '10:00', venue: 'Meet at Chowk Bazaar', capacity: 40, entry_fee: 0, tags: ['photo walk', 'bring any camera'], base_rsvps: 36,
+    description: 'Early light through the lanes around Chowk Bazaar, ending at the riverfront. Phone cameras are entirely welcome; two club DSLRs can be booked in advance if you do not own one.' },
+  { slug: 'typography-workshop', club: 'studio-seven', title: 'Typography That Does Not Look Default', dayOffset: 8, start_time: '18:00', end_time: '20:00', venue: 'Design Lab, A Block', capacity: 50, entry_fee: 0, tags: ['workshop', 'laptop needed'], base_rsvps: 46,
+    description: 'Type scales, pairing, and why your poster looks like a template. Practical from the first fifteen minutes — bring a laptop with Figma installed and a project you are unhappy with.' },
+
+  { slug: 'friday-screening', club: 'reel-lens', title: 'Friday Screening — Pather Panchali', dayOffset: 1, start_time: '19:00', end_time: '22:00', venue: 'Auditorium Annexe', capacity: 180, entry_fee: 0, tags: ['screening', 'discussion after'], base_rsvps: 97,
+    description: 'Ray\u2019s first film, shown from a restored print, with a forty-minute discussion afterwards led by the film studies faculty. Doors at a quarter to seven.' },
+  { slug: 'radio-auditions', club: 'frequency-radio', title: 'Radio Jockey Auditions', dayOffset: 11, start_time: '12:00', end_time: '17:00', venue: 'Radio Booth, Library Basement', capacity: 70, entry_fee: 0, tags: ['auditions', 'no experience needed'], base_rsvps: 58,
+    description: 'Three minutes on mic with a prompt you get on the spot. We are listening for warmth and clarity rather than polish, and everyone selected gets full desk training.' },
+  { slug: 'newsroom-workshop', club: 'campus-herald', title: 'Newsroom Workshop — Reporting a Campus Story', dayOffset: 13, start_time: '17:00', end_time: '19:30', venue: 'Newsroom, Student Centre', capacity: 55, entry_fee: 0, tags: ['workshop', 'open to all years'], base_rsvps: 39,
+    description: 'How to find a story, source it properly, and write it so it survives a legal read. Working journalists from two Surat dailies join the second half for questions.' },
+
+  { slug: 'unplugged-night', club: 'raag-music', title: 'Unplugged Night', dayOffset: 15, start_time: '18:30', end_time: '22:00', venue: 'Amphitheatre, Student Centre', capacity: 400, entry_fee: 0, tags: ['live music', 'free entry'], base_rsvps: 318,
+    description: 'Acoustic sets from four student bands and the classical circle, under the lights in the amphitheatre. The evening that traditionally opens the festival season.' },
+  { slug: 'garba-practice', club: 'footwork-dance', title: 'Open Garba Practice', dayOffset: 2, start_time: '18:00', end_time: '20:30', venue: 'Dance Studio, Student Centre', capacity: 120, entry_fee: 0, tags: ['drop-in', 'beginners welcome'], base_rsvps: 89,
+    description: 'Two and a half hours of open practice before the festival, taught from the basic steps up. No partner and no experience needed — just wear something you can move in.' },
+  { slug: 'street-play', club: 'manch-theatre', title: 'Street Play — Quad Performance', dayOffset: 4, start_time: '13:00', end_time: '14:00', venue: 'Central Quad', capacity: 250, entry_fee: 0, tags: ['street theatre', 'free'], base_rsvps: 64,
+    description: 'A twenty-minute piece on water use in the city, performed twice over the lunch hour. Stand wherever you like; the circle forms itself.' },
+
+  { slug: 'blood-drive', club: 'seva-wing', title: 'Campus Blood Donation Drive', dayOffset: 19, start_time: '09:00', end_time: '16:00', venue: 'Sports Complex Foyer', capacity: 400, entry_fee: 0, tags: ['volunteering', 'walk-ins welcome'], base_rsvps: 233,
+    description: 'Run with the Surat Civil Hospital blood bank. Bring a photo ID, eat properly beforehand, and expect to be there about forty minutes in total.' },
+  { slug: 'tree-plantation', club: 'prakriti-eco', title: 'Native Tree Plantation Drive', dayOffset: 7, start_time: '08:00', end_time: '11:00', venue: 'North Campus Boundary', capacity: 150, entry_fee: 0, tags: ['outdoor', 'gloves provided'], base_rsvps: 108,
+    description: 'Two hundred saplings of eleven native species going in along the north boundary. Tools, gloves and breakfast are provided; wear something you do not mind getting muddy.' },
+
+  { slug: 'demo-day', club: 'e-cell', title: 'Demo Day — Student Startup Showcase', dayOffset: 26, start_time: '14:00', end_time: '19:00', venue: 'Incubation Centre, C Block', capacity: 220, entry_fee: 0, tags: ['pitches', 'investors attending'], base_rsvps: 147,
+    description: 'Nine student teams pitch for eight minutes each to a room that includes four investors and a dozen alumni founders. Open to anyone who wants to watch, with stalls and conversation afterwards.' },
+  { slug: 'valuation-bootcamp', club: 'bulls-and-bears', title: 'Valuation Bootcamp', dayOffset: 17, start_time: '18:00', end_time: '20:00', venue: 'Lecture Hall 4, C Block', capacity: 80, entry_fee: 0, tags: ['workshop', 'spreadsheet provided'], base_rsvps: 62,
+    description: 'Build a discounted cash flow model on a real listed company from a blank sheet. The template and the completed model are shared afterwards so you can rebuild it on your own.' },
+];
+
+const ANNOUNCEMENTS = [
+  { club: null, title: 'Club registration for the odd semester closes on the 30th', pinned: true,
+    body: 'Every club listed on this portal is accepting members until the 30th. You can join as many as you like, but attendance is tracked, so be honest about what you can actually turn up to.' },
+  { club: 'code-forge', title: 'Hackathon team registration is open', pinned: true,
+    body: 'Teams of up to four. If you do not have a team, put your name on the solo list and we will pair you at the opening briefing — that is how half of last year\u2019s winning team met.' },
+  { club: 'willow-cricket', title: 'Morning nets move to 6:00 AM from Monday', pinned: false,
+    body: 'The ground is being rolled at eight, so nets now start an hour earlier. Bring your own kit if you have one; the club bags stay available as usual.' },
+  { club: 'seva-wing', title: 'Volunteers needed for the municipal school tuition programme', pinned: false,
+    body: 'Two evenings a week, two hours each, teaching classes six to eight. No teaching experience needed and training is provided on the first Saturday.' },
+  { club: 'aperture-photography', title: 'Camera booking has moved to the member dashboard', pinned: false,
+    body: 'Both DSLRs and the lens set can now be reserved up to a fortnight ahead. Kit is collected from the media room and must come back by six the next evening.' },
+  { club: 'raag-music', title: 'Auditions for the festival opening set', pinned: false,
+    body: 'Four slots on the unplugged night are open to bands that have not played a campus stage before. Send a two-song recording to the society email by the end of the week.' },
+];
+
+module.exports = { CATEGORIES, CLUBS, EVENTS, ANNOUNCEMENTS };

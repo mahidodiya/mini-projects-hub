@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Photo Walk — Surat Old City banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(24)">
+      <stop offset="0%" stop-color="#a74c24"/>
+      <stop offset="100%" stop-color="#421e0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d79172" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d79172" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="568"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="614" cy="122" rx="528" ry="273" fill="url(#glow)"/>
+  <g><polygon points="909.7477727383375,113.74560240190476 1051.243483806029,156.1943157222122 945.1217005052604,255.2413134695962" fill="#d79172" opacity="0.28" transform="rotate(88 910 114)"/><rect x="19" y="241" width="144" height="26" rx="4" fill="#d79172" opacity="0.12" transform="rotate(129 19 241)"/><rect x="85" y="387" width="119" height="21" rx="4" fill="#d79172" opacity="0.16" transform="rotate(347 85 387)"/><polygon points="726.49946808815,120.22286483086646 865.9982927050442,162.0725122159347 761.3741742423736,259.7216894477606" fill="#d79172" opacity="0.25" transform="rotate(24 726 120)"/><rect x="525" y="221" width="132" height="24" rx="4" fill="#d79172" opacity="0.17" transform="rotate(142 525 221)"/><polygon points="267.6847008615732,133.932815361768 332.4964315071702,153.3763345554471 283.88763352297246,198.744546007365" fill="#d79172" opacity="0.27" transform="rotate(39 268 134)"/><rect x="596" y="29" width="127" height="23" rx="4" fill="#d79172" opacity="0.13" transform="rotate(125 596 29)"/><polygon points="472.8045570105314,25.895864157937467 513.3412333298475,38.056867053732276 482.93872609036043,66.4325404772535" fill="#d79172" opacity="0.19" transform="rotate(63 473 26)"/><polygon points="345.2567131072283,405.8997192280367 453.590316362679,438.3998002046719 372.34011392109096,514.2333224834874" fill="#d79172" opacity="0.26" transform="rotate(192 345 406)"/><polygon points="662.1419084072113,12.353786900639534 770.4676814563572,44.851518815383315 689.2233516694978,120.67955994978547" fill="#d79172" opacity="0.19" transform="rotate(18 662 12)"/><polygon points="332.2320990264416,322.3914932180196 372.0672153867781,334.34202812612057 342.1908781165257,362.22660957835615" fill="#d79172" opacity="0.15" transform="rotate(272 332 322)"/><polygon points="913.4923580288887,397.08844006061554 956.8598783388734,410.09869615361094 924.3342381063849,440.4559603706002" fill="#d79172" opacity="0.20" transform="rotate(283 913 397)"/><rect x="443" y="314" width="83" height="15" rx="4" fill="#d79172" opacity="0.24" transform="rotate(230 443 314)"/><polygon points="390.63923858106136,248.0049462430179 520.8827833179384,287.07800966408104 423.20012476528063,378.248490979895" fill="#d79172" opacity="0.30" transform="rotate(170 391 248)"/><rect x="510" y="200" width="128" height="23" rx="4" fill="#d79172" opacity="0.24" transform="rotate(321 510 200)"/><rect x="367" y="295" width="134" height="24" rx="4" fill="#d79172" opacity="0.30" transform="rotate(270 367 295)"/></g>
+  <g transform="translate(670 46) scale(1.806) rotate(3.8 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

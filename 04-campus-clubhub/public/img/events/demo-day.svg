@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Demo Day — Student Startup Showcase banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(57)">
+      <stop offset="0%" stop-color="#845c12"/>
+      <stop offset="100%" stop-color="#342407"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#bc9d65" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#bc9d65" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="992"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="476" cy="53" rx="528" ry="273" fill="url(#glow)"/>
+  <g><rect x="-20" y="168" width="60" height="252" rx="6" fill="#bc9d65" opacity="0.22"/><rect x="49" y="115" width="40" height="305" rx="6" fill="#bc9d65" opacity="0.10"/><rect x="96" y="196" width="43" height="224" rx="6" fill="#bc9d65" opacity="0.11"/><rect x="149" y="22" width="21" height="398" rx="6" fill="#bc9d65" opacity="0.15"/><rect x="182" y="111" width="37" height="309" rx="6" fill="#bc9d65" opacity="0.16"/><rect x="230" y="198" width="60" height="222" rx="6" fill="#bc9d65" opacity="0.25"/><rect x="308" y="91" width="55" height="329" rx="6" fill="#bc9d65" opacity="0.25"/><rect x="378" y="54" width="44" height="366" rx="6" fill="#bc9d65" opacity="0.23"/><rect x="441" y="59" width="33" height="361" rx="6" fill="#bc9d65" opacity="0.19"/><rect x="486" y="202" width="25" height="218" rx="6" fill="#bc9d65" opacity="0.16"/><rect x="524" y="240" width="25" height="180" rx="6" fill="#bc9d65" opacity="0.12"/><rect x="561" y="124" width="20" height="296" rx="6" fill="#bc9d65" opacity="0.22"/><rect x="593" y="150" width="59" height="270" rx="6" fill="#bc9d65" opacity="0.20"/><rect x="671" y="195" width="25" height="225" rx="6" fill="#bc9d65" opacity="0.18"/><rect x="706" y="24" width="38" height="396" rx="6" fill="#bc9d65" opacity="0.18"/><rect x="760" y="65" width="48" height="355" rx="6" fill="#bc9d65" opacity="0.24"/><rect x="822" y="256" width="29" height="164" rx="6" fill="#bc9d65" opacity="0.11"/><rect x="868" y="185" width="25" height="235" rx="6" fill="#bc9d65" opacity="0.14"/><rect x="902" y="176" width="57" height="244" rx="6" fill="#bc9d65" opacity="0.19"/></g>
+  <g transform="translate(651 46) scale(1.806) rotate(-4.9 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M26 150h148" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <path d="M26 150V52" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <rect x="48" y="106" width="26" height="44" fill="currentColor" opacity=".8"/>
+    <rect x="88" y="80" width="26" height="70" fill="currentColor" opacity=".8"/>
+    <rect x="128" y="54" width="26" height="96" fill="currentColor" opacity=".8"/>
+    <path d="M44 92l28-26 30 20 44-42" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M124 44h26v26" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M26 150h148" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <path d="M26 150V52" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    <rect x="48" y="106" width="26" height="44" fill="currentColor" opacity=".8"/>
+    <rect x="88" y="80" width="26" height="70" fill="currentColor" opacity=".8"/>
+    <rect x="128" y="54" width="26" height="96" fill="currentColor" opacity=".8"/>
+    <path d="M44 92l28-26 30 20 44-42" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M124 44h26v26" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

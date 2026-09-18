@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Atrium Exhibition — Opening Night banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(69)">
+      <stop offset="0%" stop-color="#a74c24"/>
+      <stop offset="100%" stop-color="#421e0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d79172" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d79172" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="888"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="287" cy="66" rx="528" ry="273" fill="url(#glow)"/>
+  <g><rect x="583" y="270" width="127" height="23" rx="4" fill="#d79172" opacity="0.12" transform="rotate(186 583 270)"/><rect x="75" y="401" width="101" height="18" rx="4" fill="#d79172" opacity="0.16" transform="rotate(299 75 401)"/><rect x="106" y="252" width="41" height="7" rx="4" fill="#d79172" opacity="0.13" transform="rotate(155 106 252)"/><rect x="672" y="38" width="82" height="15" rx="4" fill="#d79172" opacity="0.30" transform="rotate(159 672 38)"/><polygon points="266.5497310459614,400.1333075668663 314.46953248232603,414.5092479977757 278.52968140505254,448.05310900323093" fill="#d79172" opacity="0.29" transform="rotate(300 267 400)"/><polygon points="42.4286887049675,295.1862394111231 127.91670522652566,320.83264436759055 63.80069283535704,380.67425593268126" fill="#d79172" opacity="0.16" transform="rotate(63 42 295)"/><rect x="770" y="151" width="136" height="24" rx="4" fill="#d79172" opacity="0.30" transform="rotate(246 770 151)"/><polygon points="233.8974244147539,233.00386480987072 269.1674946527928,243.5848858812824 242.71494197426364,268.2739350479096" fill="#d79172" opacity="0.19" transform="rotate(19 234 233)"/><rect x="274" y="112" width="54" height="10" rx="4" fill="#d79172" opacity="0.24" transform="rotate(103 274 112)"/><polygon points="684.9129550158978,27.633459731005132 780.8228264283389,56.40642115473747 708.890422869008,123.54333114344627" fill="#d79172" opacity="0.10" transform="rotate(48 685 28)"/><rect x="585" y="329" width="71" height="13" rx="4" fill="#d79172" opacity="0.22" transform="rotate(276 585 329)"/><rect x="666" y="103" width="92" height="17" rx="4" fill="#d79172" opacity="0.25" transform="rotate(122 666 103)"/><polygon points="301.2195733934641,85.86387970950454 373.70631471276283,107.60990210529417 319.3412587232888,158.3506210288033" fill="#d79172" opacity="0.32" transform="rotate(293 301 86)"/><polygon points="882.8054791688919,203.78314238972962 1031.2189768720418,248.3071917006746 919.9088535946794,352.19664009287953" fill="#d79172" opacity="0.16" transform="rotate(323 883 204)"/><polygon points="78.27023416757584,244.70692897215486 188.45214354805648,277.76150178629905 105.815711512696,354.8888383526355" fill="#d79172" opacity="0.22" transform="rotate(10 78 245)"/><rect x="20" y="96" width="67" height="12" rx="4" fill="#d79172" opacity="0.19" transform="rotate(48 20 96)"/></g>
+  <g transform="translate(639 46) scale(1.806) rotate(-2.9 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 30c39 0 70 28 70 62 0 22-18 30-32 30h-14c-12 0-20 7-20 17 0 6 3 10 3 16 0 9-7 15-17 15-38 0-70-32-70-70S61 30 100 30z" fill="none" stroke="currentColor" stroke-width="8"/>
+    <circle cx="66" cy="70" r="10" fill="currentColor"/><circle cx="104" cy="58" r="10" fill="currentColor"/>
+    <circle cx="136" cy="80" r="10" fill="currentColor"/><circle cx="60" cy="110" r="10" fill="currentColor"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

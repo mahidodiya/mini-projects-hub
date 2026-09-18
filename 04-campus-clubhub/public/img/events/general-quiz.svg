@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="The Big Fat General Quiz banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(28)">
+      <stop offset="0%" stop-color="#5c368a"/>
+      <stop offset="100%" stop-color="#241536"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9d80c0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#9d80c0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="890"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="252" cy="115" rx="528" ry="273" fill="url(#glow)"/>
+  <g><rect x="-20" y="31" width="43" height="389" rx="6" fill="#9d80c0" opacity="0.11"/><rect x="30" y="238" width="36" height="182" rx="6" fill="#9d80c0" opacity="0.24"/><rect x="77" y="86" width="61" height="334" rx="6" fill="#9d80c0" opacity="0.16"/><rect x="148" y="126" width="28" height="294" rx="6" fill="#9d80c0" opacity="0.14"/><rect x="184" y="49" width="20" height="371" rx="6" fill="#9d80c0" opacity="0.23"/><rect x="220" y="99" width="41" height="321" rx="6" fill="#9d80c0" opacity="0.19"/><rect x="270" y="218" width="36" height="202" rx="6" fill="#9d80c0" opacity="0.21"/><rect x="325" y="137" width="25" height="283" rx="6" fill="#9d80c0" opacity="0.20"/><rect x="364" y="126" width="22" height="294" rx="6" fill="#9d80c0" opacity="0.25"/><rect x="405" y="245" width="16" height="175" rx="6" fill="#9d80c0" opacity="0.23"/><rect x="434" y="115" width="25" height="305" rx="6" fill="#9d80c0" opacity="0.10"/><rect x="471" y="213" width="17" height="207" rx="6" fill="#9d80c0" opacity="0.18"/><rect x="508" y="119" width="23" height="301" rx="6" fill="#9d80c0" opacity="0.16"/><rect x="546" y="215" width="20" height="205" rx="6" fill="#9d80c0" opacity="0.19"/><rect x="583" y="149" width="28" height="271" rx="6" fill="#9d80c0" opacity="0.19"/><rect x="623" y="244" width="38" height="176" rx="6" fill="#9d80c0" opacity="0.20"/><rect x="671" y="52" width="34" height="368" rx="6" fill="#9d80c0" opacity="0.17"/><rect x="720" y="247" width="49" height="173" rx="6" fill="#9d80c0" opacity="0.24"/><rect x="777" y="229" width="57" height="191" rx="6" fill="#9d80c0" opacity="0.14"/><rect x="849" y="163" width="42" height="257" rx="6" fill="#9d80c0" opacity="0.15"/><rect x="904" y="178" width="28" height="242" rx="6" fill="#9d80c0" opacity="0.12"/><rect x="942" y="149" width="36" height="271" rx="6" fill="#9d80c0" opacity="0.13"/></g>
+  <g transform="translate(635 46) scale(1.806) rotate(-2.3 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 56c-18-13-42-18-70-15v104c28-3 52 2 70 15 18-13 42-18 70-15V41c-28-3-52 2-70 15z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 56v104" stroke="currentColor" stroke-width="7"/>
+    <path d="M46 72h34M46 92h34M46 112h26M120 72h34M120 92h34M120 112h26" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 56c-18-13-42-18-70-15v104c28-3 52 2 70 15 18-13 42-18 70-15V41c-28-3-52 2-70 15z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 56v104" stroke="currentColor" stroke-width="7"/>
+    <path d="M46 72h34M46 92h34M46 112h26M120 72h34M120 92h34M120 112h26" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

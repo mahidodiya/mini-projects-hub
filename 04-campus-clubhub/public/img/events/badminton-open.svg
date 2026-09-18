@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-label="Surat Inter-College Doubles Open banner">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(32)">
+      <stop offset="0%" stop-color="#17693b"/>
+      <stop offset="100%" stop-color="#092917"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#69a784" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#69a784" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="944"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <ellipse cx="240" cy="27" rx="528" ry="273" fill="url(#glow)"/>
+  <g><path d="M-40 3 Q 480 -62 1000 3" fill="none" stroke="#69a784" stroke-width="4.3" opacity="0.33"/><path d="M-40 292 Q 480 132 1000 292" fill="none" stroke="#69a784" stroke-width="1.6" opacity="0.15"/><path d="M-40 8 Q 480 -85 1000 8" fill="none" stroke="#69a784" stroke-width="1.8" opacity="0.29"/><path d="M-40 131 Q 480 69 1000 131" fill="none" stroke="#69a784" stroke-width="4.0" opacity="0.25"/><path d="M-40 231 Q 480 137 1000 231" fill="none" stroke="#69a784" stroke-width="2.3" opacity="0.34"/><path d="M-40 340 Q 480 223 1000 340" fill="none" stroke="#69a784" stroke-width="4.5" opacity="0.14"/><path d="M-40 95 Q 480 7 1000 95" fill="none" stroke="#69a784" stroke-width="3.8" opacity="0.23"/><path d="M-40 415 Q 480 273 1000 415" fill="none" stroke="#69a784" stroke-width="2.4" opacity="0.16"/><path d="M-40 37 Q 480 -42 1000 37" fill="none" stroke="#69a784" stroke-width="2.0" opacity="0.24"/></g>
+  <g transform="translate(660 46) scale(1.806) rotate(1.7 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M64 56v104M100 56v104M136 56v104" stroke="currentColor" stroke-width="11" stroke-linecap="round"/>
+    <rect x="56" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <rect x="104" y="42" width="40" height="9" rx="4.5" fill="currentColor"/>
+    <circle cx="164" cy="140" r="24" fill="currentColor"/>
+    <path d="M148 128c11 8 21 19 26 33" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M24 170h152" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="420" fill="url(#scrim)"/>
+  <rect width="960" height="420" filter="url(#grain)" opacity="0.07"/>
+</svg>

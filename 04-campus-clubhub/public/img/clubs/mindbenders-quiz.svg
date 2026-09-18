@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-label="Mindbenders Quiz Club cover image">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(49)">
+      <stop offset="0%" stop-color="#5c368a"/>
+      <stop offset="100%" stop-color="#241536"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9d80c0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#9d80c0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="40%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="286"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <ellipse cx="477" cy="31" rx="528" ry="390" fill="url(#glow)"/>
+  <g><rect x="-20" y="45" width="25" height="555" rx="6" fill="#9d80c0" opacity="0.12"/><rect x="23" y="206" width="28" height="394" rx="6" fill="#9d80c0" opacity="0.20"/><rect x="57" y="142" width="23" height="458" rx="6" fill="#9d80c0" opacity="0.23"/><rect x="90" y="236" width="20" height="364" rx="6" fill="#9d80c0" opacity="0.13"/><rect x="123" y="81" width="21" height="519" rx="6" fill="#9d80c0" opacity="0.15"/><rect x="156" y="304" width="16" height="296" rx="6" fill="#9d80c0" opacity="0.19"/><rect x="185" y="119" width="30" height="481" rx="6" fill="#9d80c0" opacity="0.25"/><rect x="223" y="84" width="55" height="516" rx="6" fill="#9d80c0" opacity="0.18"/><rect x="297" y="46" width="45" height="554" rx="6" fill="#9d80c0" opacity="0.24"/><rect x="357" y="276" width="51" height="324" rx="6" fill="#9d80c0" opacity="0.12"/><rect x="414" y="224" width="33" height="376" rx="6" fill="#9d80c0" opacity="0.24"/><rect x="462" y="332" width="53" height="268" rx="6" fill="#9d80c0" opacity="0.08"/><rect x="528" y="303" width="28" height="297" rx="6" fill="#9d80c0" opacity="0.09"/><rect x="571" y="243" width="45" height="357" rx="6" fill="#9d80c0" opacity="0.26"/><rect x="633" y="58" width="30" height="542" rx="6" fill="#9d80c0" opacity="0.12"/><rect x="669" y="97" width="51" height="503" rx="6" fill="#9d80c0" opacity="0.17"/><rect x="732" y="270" width="36" height="330" rx="6" fill="#9d80c0" opacity="0.25"/><rect x="782" y="389" width="21" height="211" rx="6" fill="#9d80c0" opacity="0.17"/><rect x="818" y="159" width="58" height="441" rx="6" fill="#9d80c0" opacity="0.18"/><rect x="895" y="116" width="48" height="484" rx="6" fill="#9d80c0" opacity="0.14"/></g>
+  <g transform="translate(475 66) scale(2.580) rotate(4.3 100 100)">
+    <g color="#000" opacity=".16" transform="translate(5 7)">
+    <path d="M100 56c-18-13-42-18-70-15v104c28-3 52 2 70 15 18-13 42-18 70-15V41c-28-3-52 2-70 15z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 56v104" stroke="currentColor" stroke-width="7"/>
+    <path d="M46 72h34M46 92h34M46 112h26M120 72h34M120 92h34M120 112h26" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></g>
+    <g color="#FFFFFF" opacity=".22">
+    <path d="M100 56c-18-13-42-18-70-15v104c28-3 52 2 70 15 18-13 42-18 70-15V41c-28-3-52 2-70 15z" fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M100 56v104" stroke="currentColor" stroke-width="7"/>
+    <path d="M46 72h34M46 92h34M46 112h26M120 72h34M120 92h34M120 112h26" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></g>
+  </g>
+  <rect width="960" height="600" fill="url(#scrim)"/>
+  <rect width="960" height="600" filter="url(#grain)" opacity="0.07"/>
+</svg>
